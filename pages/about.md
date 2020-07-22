@@ -1,14 +1,15 @@
 ---
 layout: page
-title: About
+title: Sobre mim
 permalink: /about/
-feature-img: "assets/img/pexels/circuit.jpeg"
-tags: [About, Archive]
+feature-img: "assets/img/hobbit.jpg"
+tags: [Sobre, Arquivo]
 ---
 
-Type on Strap is based on Type Theme, a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
+Eu faço um pouco de tudo.
 
-Head over to the [theme's documentation](https://github.io/sylhare/Type-on-Strap) for much more information about Type on Strap or to install this theme on your own Jekyll site.
+Sou um aluno de Ciência da Computação na UFPR que gosta de algoritmos, linguagens tipadas e computação gráfica (apesar de ainda estar aprendendo este último...), além disso gosto da parte teórica da computação. Atualmente trabalho desenvolvendo aplicativos com Flutter.
 
-This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.
- 
+Sou [cristão](https://www.churchofjesuschrist.org) praticante e passei dois anos na Argentina prestando serviço voluntário.
+
+Além de computação, me interesso por música, desenho e origami.

@@ -1,8 +1,8 @@
 ---
 layout: search
-title: Search
+title: Buscar
 permalink: /search/
-subtitle: "What are you looking for?"
+subtitle: "O que você busca?"
 feature-img: "assets/img/pexels/search-map.jpeg"
 icon: "fa-search"
 ---
