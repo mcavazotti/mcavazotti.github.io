@@ -2,7 +2,7 @@
 layout: page
 title: Sobre mim
 permalink: /about/
-feature-img: "assets/img/hobbit.jpg"
+feature-img: "assets/img/banners/hobbit.jpg"
 tags: [Sobre, Arquivo]
 ---
 
