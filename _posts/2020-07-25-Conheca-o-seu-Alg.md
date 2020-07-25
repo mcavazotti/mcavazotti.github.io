@@ -78,10 +78,14 @@ typedef struct {
 E tudo isso por apenas 40 bytes por nodo!
 
 **Caso encerrado!**
-
-
-
-
+  
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  
+  
 Ainda não!
 
 Enquanto eu pensava nas otimizações que ainda poderia fazer, reparei que ao usar uma árvore Patricia, eu teria que fazer uma média de 40 comparações por busca (o tamanho médio das palavras em inglês é aproximadamente 5, e o número de bits por caractere é 8, logo $$5*8=40$$). Se eu pudesse fazer as buscas em $$O(log_{2}n)$$, estaria melhor que a minha solução atual enquanto o número de palavras fosse menor que aproximadamente 100 bilhões. Em outras palavras: do ponto de vista prático $$O(log_{2}n)$$ é sempre melhor.
