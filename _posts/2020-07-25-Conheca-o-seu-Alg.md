@@ -82,8 +82,7 @@ E tudo isso por apenas 40 bytes por nodo!
   <br />
   <br />
   <br />
-  <br />
-  <br />
+
   
   
 Ainda não!
