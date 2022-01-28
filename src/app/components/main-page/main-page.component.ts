@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslationHelper } from 'src/app/helpers/translation-helper';
 import { TranslationService } from 'src/app/services/translation.service';
 
 @Component({
@@ -7,37 +8,25 @@ import { TranslationService } from 'src/app/services/translation.service';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-  private translationData: any;
-  private activeLanguage: string;
+  private translationHelper: TranslationHelper;
 
   title: string = "";
   about: string = "";
   projects: string = "";
 
 
-  constructor(private translation: TranslationService) {
-    this.activeLanguage = translation.getActiveLanguage();
-    this.translation.loadTranslation('main').subscribe((data) => {
-      console.log("carregando")
-      this.translationData = data;
-      this.translation.activeLanguage.subscribe(lang => {
-        this.activeLanguage = lang;
-        console.log(this.activeLanguage);
-        this.applyTranslation();
-      });
+  constructor(private translationService: TranslationService) {
+    this.translationHelper = new TranslationHelper("main-page", translationService, (translation) => {
+      this.title = translation.title;
+      this.about = translation.about;
+      this.projects = translation.projects;
     });
-    
-  }
-  
-  ngOnInit(): void {
-    
   }
 
-  private applyTranslation() {
-    console.log("aqui")
-    this.title = this.translationData.title[this.activeLanguage];
-    this.about = this.translationData.about[this.activeLanguage];
-    this.projects = this.translationData.projects[this.activeLanguage];
+  ngOnInit(): void {
+
   }
+
+
 
 }

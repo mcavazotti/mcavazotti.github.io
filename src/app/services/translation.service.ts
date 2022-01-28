@@ -12,7 +12,16 @@ export class TranslationService {
   private _activeLanguage: BehaviorSubject<string> = new BehaviorSubject(this.activeLang);
   public readonly activeLanguage: Observable<string> = this._activeLanguage.asObservable();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    var browserLanguage = navigator.language;
+    for (let i = 0; i < this.supportedLanguages.length; i++) {
+      if(this.supportedLanguages[i].search(browserLanguage.slice(0,2))){
+        this.setActiveLanguage(this.supportedLanguages[i]);
+        break;
+      }
+    }
+    this.setActiveLanguage("en-US");
+  }
 
   getSupportedLanguages(): string[] {
     return this.supportedLanguages;
@@ -20,7 +29,6 @@ export class TranslationService {
 
   setActiveLanguage(lang: string) {
     if (this.supportedLanguages.indexOf(lang) > -1) {
-      console.log("mudando");
       this.activeLang = lang;
       this._activeLanguage.next(lang);
     }
@@ -30,8 +38,8 @@ export class TranslationService {
     return this.activeLang;
   }
 
-  loadTranslation(page: string): Observable<any> {
-    return this.http.get("./assets/translations/" + page + ".json");
+  loadTranslation(component: string): Observable<any> {
+    return this.http.get("./assets/translations/" + component + ".json");
   }
 
 }
