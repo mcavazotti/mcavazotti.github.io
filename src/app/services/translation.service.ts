@@ -15,9 +15,10 @@ export class TranslationService {
   constructor(private http: HttpClient) {
     var browserLanguage = navigator.language;
     for (let i = 0; i < this.supportedLanguages.length; i++) {
-      if(this.supportedLanguages[i].search(browserLanguage.slice(0,2))){
+      var tmp = this.supportedLanguages[i].search(browserLanguage.slice(0, 2));
+      if (tmp > -1) {
         this.setActiveLanguage(this.supportedLanguages[i]);
-        break;
+        return;
       }
     }
     this.setActiveLanguage("en-US");
