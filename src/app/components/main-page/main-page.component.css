@@ -1,0 +1,14 @@
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-title {
+    display: flex;
+}
+
+#link-list {
+    display: flex;
+    flex-direction: column;
+} 
