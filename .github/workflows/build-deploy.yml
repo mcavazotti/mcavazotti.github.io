@@ -33,9 +33,11 @@ jobs:
         run: |
           npm install
           npm run-script deploy
-          git checkout gh-pages
-          git add -A
-          git commit -m "building page"
-          git push
-
-
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        with:
+          branch: gh-pages
+          folder: docs
+          clean: true
+          clean-exclude: |
+            .nojekyll
