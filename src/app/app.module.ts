@@ -8,18 +8,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { ProjectsPageComponent } from './components/projects-page/projects-page.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     AboutPageComponent,
-    ProjectsPageComponent
+    ProjectsPageComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [TranslationService],
   bootstrap: [AppComponent]

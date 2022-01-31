@@ -1,0 +1,8 @@
+#page-container {
+    display: flex;
+    justify-content: center;
+}
+.width-limiter {
+    max-width: 1000px;
+    min-width: 50vw;
+}

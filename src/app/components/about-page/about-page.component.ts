@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslationHelper } from 'src/app/helpers/translation-helper';
+import { TranslationService } from 'src/app/services/translation.service';
 
 @Component({
   selector: 'app-about-page',
@@ -6,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-page.component.css']
 })
 export class AboutPageComponent implements OnInit {
+  private translationHelper: TranslationHelper;
 
-  constructor() { }
+  about: string = "";
+
+
+  constructor(private translationService: TranslationService) {
+    this.translationHelper = new TranslationHelper("about-page", translationService, (translation) => {
+      this.about = translation.about;
+    });
+  }
 
   ngOnInit(): void {
   }

@@ -1,3 +1,7 @@
-<button (click)="changeLanguage('en-US')">eng</button>
-<button (click)="changeLanguage('pt-BR')">por</button>
-<router-outlet></router-outlet>
+<app-navbar></app-navbar>
+<div id="page-container">
+    <div class="width-limiter">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<app-footer></app-footer>
