@@ -1,5 +1,7 @@
 <app-navbar></app-navbar>
 <div id="page-container">
+    <!-- improve it -->
+    <div class="side-nav" [ngClass]="{'closed':!openSideNav}">side nav</div>
     <div class="width-limiter">
         <router-outlet></router-outlet>
     </div>

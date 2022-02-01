@@ -1,13 +1,23 @@
-#icon-list {
+#footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+
+#icon-list {
     display: flex;
     justify-content:center;
+    margin-bottom: 3px;
 }
 
 .link {
     margin: auto 10px;
+}
+
+#message {
+    display: flex;
+    justify-content:center;
+    font-size: small;
 }

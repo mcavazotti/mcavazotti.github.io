@@ -11,6 +11,7 @@ import { ProjectsPageComponent } from './components/projects-page/projects-page.
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SideNavService } from './services/side-nav.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HttpClientModule,
     FontAwesomeModule
   ],
-  providers: [TranslationService],
+  providers: [TranslationService, SideNavService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
