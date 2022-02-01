@@ -2,12 +2,15 @@ body {
     background-color:#2b2b2b;
     color: #6d9cbe;
     font-family: 'Ubuntu Mono', monospace;
+    margin: 0;
 }
 a {
     color: inherit;
 }
 
 .blink {
+  z-index: -1;
+    position: relative;
   -webkit-animation: blink 1.3s step-end infinite;
   animation: blink 1.3s step-end infinite;
 }

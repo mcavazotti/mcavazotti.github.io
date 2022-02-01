@@ -2,7 +2,7 @@
     <div id="nav" *ngIf="currentRoute !='/'">
         <div class="nav-list">
             <fa-icon id="menu" [icon]="menuIcon" size="lg" (click)="changeSideNavState()"></fa-icon>
-            <h2 id="title" routerLink="/">{{title}}<span>_</span></h2>
+            <h2 (click)="closeSideNav()" id="title" routerLink="/">{{title}}<span>_</span></h2>
         </div>
         <div class="nav-list" id="link-list">
             <a class="nav-link" routerLink="/about">{{about}}</a>

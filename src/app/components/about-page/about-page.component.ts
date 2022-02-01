@@ -11,11 +11,13 @@ export class AboutPageComponent implements OnInit {
   private translationHelper: TranslationHelper;
 
   about: string = "";
+  content:string = "";
 
 
   constructor(private translationService: TranslationService) {
     this.translationHelper = new TranslationHelper("about-page", translationService, (translation) => {
       this.about = translation.about;
+      this.content = translation.content;
     });
   }
 

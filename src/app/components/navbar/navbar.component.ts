@@ -46,6 +46,9 @@ export class NavbarComponent implements OnInit {
     });
 
     this.openSideNav = sideNavService.getState();
+    sideNavService.isOpen.subscribe((s) => {
+      this.openSideNav = s;
+    })
   }
 
   ngOnInit(): void {
@@ -58,5 +61,9 @@ export class NavbarComponent implements OnInit {
   changeSideNavState() {
     this.openSideNav = !this.openSideNav;
     this.sideNavService.setState(this.openSideNav);
+  }
+
+  closeSideNav() {
+    this.sideNavService.setState(false);
   }
 }
