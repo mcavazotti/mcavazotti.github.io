@@ -5,7 +5,7 @@
     },
     "briefing": {
         "en-US": "Ray Tracers from tutorials and books in C++ and CUDA",
-        "pt-BR": "Ray Tracers baseado em tutoriais e livros em C++ e CUDA"
+        "pt-BR": "Ray Tracers baseados em tutoriais e livros em C++ e CUDA"
     },
     "description": {
         "en-US": "<p>Code from ray tracing tutorials and books</p>",
