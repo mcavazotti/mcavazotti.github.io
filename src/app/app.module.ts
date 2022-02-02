@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SideNavService } from './services/side-nav.service';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
+import { DetailPageComponent } from './components/detail-page/detail-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProjectDetailComponent } from './components/project-detail/project-deta
     ProjectsPageComponent,
     NavbarComponent,
     FooterComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    DetailPageComponent
   ],
   imports: [
     BrowserModule,

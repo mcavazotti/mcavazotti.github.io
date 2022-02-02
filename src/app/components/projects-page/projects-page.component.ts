@@ -16,12 +16,15 @@ export class ProjectsPageComponent implements OnInit {
 
   projectsString: string = '';
 
-  constructor(private translationService: TranslationService, private projectsService : ProjectsService) {
-    this.translationHelper = new TranslationHelper("projects-page", translationService,(translation) => {
+  constructor(private translationService: TranslationService, private projectsService: ProjectsService) {
+    this.translationHelper = new TranslationHelper("projects-page", translationService, (translation) => {
       this.projectsString = translation.projects;
     });
 
-    projectsService.projectsObservable.subscribe((data) => {this.projects = data});
+    var observer = projectsService.projectsObservable.subscribe((data) => {
+      this.projects = data;
+      observer.unsubscribe();
+    });
   }
 
   ngOnInit(): void {
