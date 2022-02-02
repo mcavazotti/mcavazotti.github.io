@@ -8,6 +8,10 @@ a {
     color: inherit;
 }
 
+p {
+  font-size: larger;
+}
+
 .blink {
   z-index: -1;
     position: relative;
