@@ -1,1 +1,9 @@
-<p>{{project.id}}</p>
+<div class="detail-container">
+    <div class="content">
+        <h2>{{name}}</h2>
+        <p class="briefing">{{briefing}}</p>
+    </div>
+    <div class="img-div">
+        <img *ngIf="project.image" [src]="'assets/images/'+ project.image" alt="" class="proj-img">
+    </div>
+</div>

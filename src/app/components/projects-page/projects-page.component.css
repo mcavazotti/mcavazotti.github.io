@@ -1,0 +1,21 @@
+#projects-page {
+    display: flex;
+    flex-flow: wrap;
+    justify-content:center;
+    
+    margin: 15px 0;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 15px;
+}
+
+
+#project-list {
+    max-width: 70%;
+    margin: 10px 15px;
+    flex-grow: 1;
+}
