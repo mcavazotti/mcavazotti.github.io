@@ -12,6 +12,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SideNavService } from './services/side-nav.service';
+import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SideNavService } from './services/side-nav.service';
     AboutPageComponent,
     ProjectsPageComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,

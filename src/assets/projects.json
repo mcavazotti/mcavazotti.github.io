@@ -1,0 +1,18 @@
+[
+    {
+        "id":"personalPage",
+        "link":"https://github.com/mcavazotti/mcavazotti.github.io",
+        "year":2022
+    },
+    {
+        "id":"triangulation",
+        "link": "https://github.com/mcavazotti/triangulation",
+        "year": 2021
+    },
+    {
+        "id":"rayTracing",
+        "link": "https://github.com/mcavazotti/Ray-Tracing",
+        "image": "projects/rayTracing.png",
+        "year": 2020
+    }
+]
