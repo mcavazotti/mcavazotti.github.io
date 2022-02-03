@@ -32,6 +32,21 @@
     font-size: medium;
 }
 
+#link {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+#link p {
+    font-size: medium;
+    margin: 0;
+    margin-right: 5px;
+}
+#link a {
+    font-size: medium;
+    margin: 0;
+}
+
 #proj-img {
     min-width: 200px;
     max-width: 25vmin;

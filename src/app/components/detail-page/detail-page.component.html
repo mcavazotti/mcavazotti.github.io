@@ -6,8 +6,8 @@
         <img *ngIf="project.image" [src]="'assets/images/'+ project.image" alt="" id="proj-img">
         <h1 id="title">{{name}}<span class="blink">█</span></h1>
         <p id="year">{{project.year}}</p>
-        <div *ngIf="project.link">
-            <p>{{link}} <a href="{{project.link.url}}">{{project.link.site}}</a></p>
+        <div *ngIf="project.link" id="link">
+            <p>{{link}} </p> <a href="{{project.link.url}}">{{project.link.site}}</a>
         </div>
     </div>
     <div id="content">
