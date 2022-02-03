@@ -1,17 +1,26 @@
 [
     {
         "id":"personalPage",
-        "link":"https://github.com/mcavazotti/mcavazotti.github.io",
+        "link":{
+            "url": "https://github.com/mcavazotti/mcavazotti.github.io",
+            "site": "Github"
+        },
         "year":2022
     },
     {
         "id":"triangulation",
-        "link": "https://github.com/mcavazotti/triangulation",
+        "link": {
+            "url": "https://github.com/mcavazotti/triangulation",
+            "site": "Github"
+        },
         "year": 2021
     },
     {
         "id":"rayTracing",
-        "link": "https://github.com/mcavazotti/Ray-Tracing",
+        "link": {
+            "url":"https://github.com/mcavazotti/Ray-Tracing",
+            "site":"Github"
+        },
         "image": "projects/rayTracing.png",
         "year": 2020
     }
