@@ -22,6 +22,16 @@
     max-width: 300px;
 }
 
+#title {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#year {
+    margin-top: 0;
+    font-size: medium;
+}
+
 #proj-img {
     min-width: 200px;
     max-width: 25vmin;

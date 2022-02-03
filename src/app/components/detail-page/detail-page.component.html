@@ -2,9 +2,13 @@
     <a routerLink="/projects">&#60;{{back}}</a>
 </div>
 <div *ngIf="!errorFlag" id="detail-page">
-    <div id="header">
-        <img *ngIf="project!.image" [src]="'assets/images/'+ project!.image" alt="" id="proj-img">
+    <div *ngIf="project != null" id="header">
+        <img *ngIf="project.image" [src]="'assets/images/'+ project.image" alt="" id="proj-img">
         <h1 id="title">{{name}}<span class="blink">█</span></h1>
+        <p id="year">{{project.year}}</p>
+        <div *ngIf="project.link">
+            <p>{{link}} <a href="{{project.link.url}}">{{project.link.site}}</a></p>
+        </div>
     </div>
     <div id="content">
         <div id="content-div" [innerHTML]="description"></div>
