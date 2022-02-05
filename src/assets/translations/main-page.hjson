@@ -1,0 +1,17 @@
+{
+  about:
+  {
+    en-US: About me
+    pt-BR: Sobre mim
+  }
+  projects:
+  {
+    en-US: Projects
+    pt-BR: Projetos
+  }
+  title:
+  {
+    en-US: I'm Matheus
+    pt-BR: Sou o Matheus
+  }
+}
