@@ -1,4 +1,9 @@
 {
+  name:
+  {
+    en-US: Ray Tracer
+    pt-BR: Ray Tracer
+  }
   briefing:
   {
     en-US: Ray Tracers from tutorials and books in C++ and CUDA
@@ -6,12 +11,39 @@
   }
   description:
   {
-    en-US: <p>Code from ray tracing tutorials and books</p>
-    pt-BR: <p>Código de tutoriais e livros sobre ray tracing</p>
-  }
-  name:
-  {
-    en-US: Ray Tracer
-    pt-BR: Ray Tracer
+    en-US:
+    '''
+    <p>
+    This repository contains the source codes of some ray tracers that I wrote by following tutorials such as <a href="https://raytracing.github.io/">Ray Tracing in One Weekend</a>. Those programs were written in C++ and CUDA.
+    </p>
+
+    <p>
+    Some of their features are:
+    </p>
+    <ul>
+    <li>BVH</li>
+    <li>Render of reflective, refractive and lambertian mateirals</li>
+    <li>Volumetric rendering</li>
+    <li>Space-time render (motion blur)</li>
+    <li>UV mapping</li>
+    </ul>
+    '''
+    pt-BR: 
+    '''
+    <p>
+    Este repositório contém o código fonte de alguns ray tracers que escrevi seguindo tutoriais como <a href="https://raytracing.github.io/">Ray Tracing in One Weekend</a>. Esses programas foram escritos em C++ e CUDA.
+    </p>
+
+    <p>
+    Alguns dos recursos implementados são:
+    </p>
+    <ul>
+    <li>BVH</li>
+    <li>Renderização de materias refletivos, refratários e lambertianos</li>
+    <li>Renderização volumétrica</li>
+    <li>Renderização espaço temporal (motion blur)</li>
+    <li>Mapeamento UV</li>
+    </ul>
+    '''
   }
 }

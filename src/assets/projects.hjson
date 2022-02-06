@@ -10,6 +10,7 @@
   }
   {
     id: triangulation
+    image: projects/triangulate.png
     link:
     {
       site: Github

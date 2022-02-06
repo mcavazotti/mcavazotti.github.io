@@ -8,8 +8,8 @@ a {
     color: inherit;
 }
 
-p {
-  font-size: larger;
+p,li {
+  font-size: large;
 }
 
 .blink {

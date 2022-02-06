@@ -57,3 +57,6 @@
     margin: 10px 15px;
     flex-grow: 1;
 }
+img {
+    width: 100%;
+}

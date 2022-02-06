@@ -11,7 +11,7 @@
   }
   link:
   {
-    en-US: Project link:
-    pt-BR: Link do projeto:
+    en-US: "Project link:"
+    pt-BR: "Link do projeto:"
   }
 }

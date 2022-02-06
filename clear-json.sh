@@ -1,0 +1,1 @@
+for i in $(find ./src/assets/ -name "*.json" -type f); do rm $i; done
