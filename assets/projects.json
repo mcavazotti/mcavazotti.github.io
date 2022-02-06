@@ -1,27 +1,28 @@
 [
-    {
-        "id":"personalPage",
-        "link":{
-            "url": "https://github.com/mcavazotti/mcavazotti.github.io",
-            "site": "Github"
-        },
-        "year":2022
+  {
+    "id": "personalPage",
+    "link": {
+      "site": "Github",
+      "url": "https://github.com/mcavazotti/mcavazotti.github.io"
     },
-    {
-        "id":"triangulation",
-        "link": {
-            "url": "https://github.com/mcavazotti/triangulation",
-            "site": "Github"
-        },
-        "year": 2021
+    "year": 2022
+  },
+  {
+    "id": "triangulation",
+    "image": "projects/triangulate.png",
+    "link": {
+      "site": "Github",
+      "url": "https://github.com/mcavazotti/triangulation"
     },
-    {
-        "id":"rayTracing",
-        "link": {
-            "url":"https://github.com/mcavazotti/Ray-Tracing",
-            "site":"Github"
-        },
-        "image": "projects/rayTracing.png",
-        "year": 2020
-    }
+    "year": 2021
+  },
+  {
+    "id": "rayTracing",
+    "image": "projects/rayTracing.png",
+    "link": {
+      "site": "Github",
+      "url": "https://github.com/mcavazotti/Ray-Tracing"
+    },
+    "year": 2020
+  }
 ]
