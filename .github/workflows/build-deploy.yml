@@ -34,11 +34,10 @@ jobs:
           npm install
           npm run-script deploy
           cp docs/index.html docs/404.html
+          touch .nojekyll
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.3
         with:
           branch: gh-pages
           folder: docs
           clean: true
-          clean-exclude: |
-            .nojekyll
