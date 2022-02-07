@@ -10,13 +10,19 @@
     en-US: 
     '''
     <p>
-    I made this program for an school assignment in 2021. The algorithm is based on the one described in <strong>Computational Geometry: Algorithms and Applications</strong> (third ed.). I had to do some adaptations since the algorithm in the book was described in rather high-level terms.
+    I made this program for an school assignment in 2021. The algorithm is based on the one described in <strong>Computational Geometry: Algorithms and Applications</strong> (third ed.).
+    </p>
+    <p>
+    The polygons and the resulting triangles are stored using a DCEL (Doubly-connected edge list). I didn't use any computer geometry library in this project, only the STL. 
     </p>
     '''
     pt-BR: 
     '''
     <p>
-    Eu fiz esse programa como um trabalho da faculdade em 2021. O algoritmo é baseado naquele descrito no livro <strong>Computational Geometry: Algorithms and Applications</strong> (3 ed.). Tive que fazer algumas adaptações já que o algoritmo no livro estava descrito de um modo muito em alto nível
+    Eu fiz esse programa como um trabalho da faculdade em 2021. O algoritmo é baseado naquele descrito no livro <strong>Computational Geometry: Algorithms and Applications</strong> (3 ed.).
+    </p>
+    <p>
+     Os polígonos e, posteriormente, os triângulos foram armazenados na forma de uma DCEL (Doubly-connected edge list). Para a realização deste projeto, não usei nenhuma biblioteca de geometria computacional, apenas a STL.
     </p>
     '''
   }

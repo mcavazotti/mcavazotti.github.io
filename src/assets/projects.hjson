@@ -9,6 +9,16 @@
     year: 2022
   }
   {
+    id: voronoi
+    image: projects/voronoi.png
+    link:
+    {
+      site: Github
+      url: https://github.com/mcavazotti/voronoi
+    }
+    year: 2021
+  }
+  {
     id: triangulation
     image: projects/triangulate.png
     link:
