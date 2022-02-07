@@ -1,0 +1,14 @@
+{
+  "briefing": {
+    "en-US": "Voronoi diagram generator in C++",
+    "pt-BR": "Gerador de diagramas de Voronoi em C++"
+  },
+  "description": {
+    "en-US": "<p>\nI made this program for an school assignment in 2021. In order to produce the Voronoi diagram, the program generates a Delaunay triangulation on the input points and then computes the dual graph of this triangulation. From the Delaunay triangulation's dual graph, it is simple to obtain the Voronoi diagram for given points\n</p>\n<p>\nThe triangles and the resulting polygons that constitutes the diagram are stored using a DCEL (Doubly-connected edge list). I didn't use any computer geometry library in this project, only the STL. \n</p>",
+    "pt-BR": "<p>\nEu fiz esse programa como um trabalho da faculdade em 2021. Para gerar o diagrama de Voronoi, o programa primeiro gera uma triangulação de Delaunay sobre os pontos dados e, então, calcula o grafo dual dessa triangulação. À partir do grafo dual da triangulação de Delaunay, pode-se obter facilmente o diagrama de Voronoi.  \n</p>\n<p>\n Os triângulos e, posteriormente, os polígonos que constituem o diagrama foram armazenados na forma de uma DCEL (Doubly-connected edge list). Para a realização deste projeto, não usei nenhuma biblioteca de geometria computacional, apenas a STL.\n</p>"
+  },
+  "name": {
+    "en-US": "Voronoi Diagram",
+    "pt-BR": "Diagrama de Voronoi"
+  }
+}
