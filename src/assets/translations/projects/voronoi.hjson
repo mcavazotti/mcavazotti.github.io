@@ -4,7 +4,6 @@
     en-US: Voronoi diagram generator in C++
     pt-BR: Gerador de diagramas de Voronoi em C++
   }
-  // write description
   description:
     {
     en-US: 
