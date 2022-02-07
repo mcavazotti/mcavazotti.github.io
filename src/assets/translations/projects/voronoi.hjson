@@ -28,7 +28,7 @@
   }
   name:
   {
-    en-US: Delaunay Triangulation
-    pt-BR: Triangulação de Delaunay
+    en-US: Voronoi Diagram
+    pt-BR: Diagrama de Voronoi
   }
 }
