@@ -38,4 +38,14 @@
     }
     year: 2020
   }
+  {
+    id: mazeSolver
+    iamge: projects/mazeSolver.png
+    link:
+    {
+      site: Github
+      url: https://github.com/mcavazotti/maze-solver-cuda
+    }
+    year: 2020
+  }
 ]
