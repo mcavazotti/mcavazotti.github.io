@@ -40,7 +40,7 @@
   }
   {
     id: mazeSolver
-    iamge: projects/mazeSolver.png
+    image: projects/mazeSolver.png
     link:
     {
       site: Github
