@@ -35,8 +35,8 @@
     "year": 2020
   },
   {
-    "iamge": "projects/mazeSolver.png",
     "id": "mazeSolver",
+    "image": "projects/mazeSolver.png",
     "link": {
       "site": "Github",
       "url": "https://github.com/mcavazotti/maze-solver-cuda"
