@@ -33,5 +33,14 @@
       "url": "https://github.com/mcavazotti/Ray-Tracing"
     },
     "year": 2020
+  },
+  {
+    "iamge": "projects/mazeSolver.png",
+    "id": "mazeSolver",
+    "link": {
+      "site": "Github",
+      "url": "https://github.com/mcavazotti/maze-solver-cuda"
+    },
+    "year": 2020
   }
 ]
