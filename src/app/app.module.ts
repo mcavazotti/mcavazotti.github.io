@@ -14,6 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SideNavService } from './services/side-nav.service';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 import { DetailPageComponent } from './components/detail-page/detail-page.component';
+import { LiveViewPageComponent } from './components/live-view-page/live-view-page.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DetailPageComponent } from './components/detail-page/detail-page.compon
     NavbarComponent,
     FooterComponent,
     ProjectDetailComponent,
-    DetailPageComponent
+    DetailPageComponent,
+    LiveViewPageComponent
   ],
   imports: [
     BrowserModule,

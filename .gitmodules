@@ -1,0 +1,3 @@
+[submodule "src/assets/live"]
+	path = src/assets/live
+	url = https://github.com/mcavazotti/canvas-stuff

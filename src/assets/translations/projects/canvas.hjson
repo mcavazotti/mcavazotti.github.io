@@ -1,0 +1,33 @@
+{
+  briefing:
+  {
+    en-US: Small experients with HTML canvas
+    pt-BR: Pequenos experimentos com canvas do HTML
+  }
+  description:
+    {
+    en-US: 
+    '''
+    <p>
+    There was a period of time during 2021 when I used to have much free time and didn't have access to a good development environment. This situation induced me to start experimenting with HTML's canvas, mostly by implementing simple physics simulations. I also had a look on WebGL and Three.JS. 
+    </p>
+    <p>
+    The repository contains many of these small programs, most of them made with pure HTML and JavaScript. Among them, the highlight goes to the planet simulation and the 2D hair simulation. 
+    </p>
+    '''
+    pt-BR: 
+    '''
+    <p>
+    Em 2021, houve um periodo que eu tinha tempo livre e não tinha um ambiente de desenvolvimento ideal. Isso me levou a começar a brincar com o canvas do HTML, fazendo experimentos principalmente com simulações físicas. Comecei a mexer também com WebGL e Three.JS, mas não cheguei a me aprofundar neles.
+    </p>
+    <p>
+    O repositório contém vários desses pequenos programas, a maioria feito com HTML e JavaScript puros. Dentre esses programas, o destaque vai para o simulador de planetas e o simulador de cabelos em 2D.
+    </p>
+    '''
+  }
+  name:
+  {
+    en-US: Canvas Stuff
+    pt-BR: Coisas de Canvas
+  }
+}

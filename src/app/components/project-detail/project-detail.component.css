@@ -28,9 +28,12 @@ p {
 } */
 
 .img-div {
+    display: flex;
+    justify-content: center;
     margin: 0   15px;
     width: 250px;
     max-height: 250px;
+    border: 1px solid #6d9cbe;
 }
 
 .proj-img {

@@ -1,12 +1,23 @@
 [
   {
     id: personalPage
+    image: projects/personalPage.png
     link:
     {
       site: Github
       url: https://github.com/mcavazotti/mcavazotti.github.io
     }
     year: 2022
+  }
+  {
+    id:canvas
+    image: projects/canvas.png
+    link:
+    {
+      site: Github
+      url: https://github.com/mcavazotti/canvas-stuff
+    }
+    year: 2021 
   }
   {
     id: voronoi

@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "sh ./convert-hjson.sh && ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "deploy": "sh convert-hjson.sh; ng build --output-path docs",
-    "test": "ng test"
+    "test": "ng test",
+    "hjson": "hjson"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +35,7 @@
     "@angular/compiler-cli": "~12.1.0",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
+    "hjson": "^3.2.2",
     "jasmine-core": "~3.8.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
