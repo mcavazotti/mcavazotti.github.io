@@ -24,7 +24,7 @@ export class AppComponent {
 
     this.openSideNav = sideNavService.getState();
 
-    sideNavService.isOpen.subscribe((s) => {
+    sideNavService.isOpen$.subscribe((s) => {
       this.openSideNav = s;
     })
   }

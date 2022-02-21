@@ -10,7 +10,7 @@ import { ProjectsPageComponent } from './components/projects-page/projects-page.
 const appRoutes: Routes = [
   {path:'about', component: AboutPageComponent},
   {path:'projects', component: ProjectsPageComponent},
-  {path:'live', component: LiveViewPageComponent},
+  {path:'live/:id', component: LiveViewPageComponent},
   {path:'projects/:id', component: DetailPageComponent},
   {path:'main', component: MainPageComponent},
   {path:'404', component: NotFoundComponent},
