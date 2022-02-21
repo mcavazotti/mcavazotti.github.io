@@ -1,7 +1,7 @@
 {
   "back": {
-    "en-US": "Go back",
-    "pt-BR": "Voltar"
+    "en-US": "Go back to Projects",
+    "pt-BR": "Voltar para Projetos"
   },
   "error": {
     "en-US": "There was an error while retrieving project data.",
