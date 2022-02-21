@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { faGithubSquare, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { TranslationHelper } from 'src/app/helpers/translation-helper';
 import { TranslationService } from 'src/app/services/translation.service';
@@ -8,7 +8,7 @@ import { TranslationService } from 'src/app/services/translation.service';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent implements OnInit, OnDestroy {
   private translationHelper: TranslationHelper;
 
   linkedInIcon = faLinkedin;
@@ -22,6 +22,9 @@ export class FooterComponent implements OnInit {
     this.translationHelper = new TranslationHelper("footer", translationService, (translation) => {
       this.footerMessage = translation.message;
     });
+  }
+  ngOnDestroy(): void {
+    this.translationHelper.dispose();
   }
 
   ngOnInit(): void {

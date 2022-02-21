@@ -1,4 +1,4 @@
-<div id="navbar">
+<div *ngIf="!inIFrame" id="navbar">
     <div id="nav" *ngIf="(currentRoute !='/' && currentRoute !='/main')">
         <div class="nav-list">
             <fa-icon id="menu" [icon]="menuIcon" size="lg" (click)="changeSideNavState()"></fa-icon>

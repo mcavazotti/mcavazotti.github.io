@@ -15,6 +15,7 @@ import { SideNavService } from './services/side-nav.service';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 import { DetailPageComponent } from './components/detail-page/detail-page.component';
 import { LiveViewPageComponent } from './components/live-view-page/live-view-page.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LiveViewPageComponent } from './components/live-view-page/live-view-pag
     FooterComponent,
     ProjectDetailComponent,
     DetailPageComponent,
-    LiveViewPageComponent
+    LiveViewPageComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

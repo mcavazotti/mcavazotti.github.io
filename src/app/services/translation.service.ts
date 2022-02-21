@@ -7,10 +7,11 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class TranslationService {
   private supportedLanguages: string[] = ["pt-BR", "en-US"];
-  private activeLang: string = "pt-BR";
-
-  private _activeLanguage: BehaviorSubject<string> = new BehaviorSubject(this.activeLang);
-  public readonly activeLanguage: Observable<string> = this._activeLanguage.asObservable();
+  private _activeLanguage: BehaviorSubject<string> = new BehaviorSubject("pt-BR");
+  public readonly activeLanguage$: Observable<string> = this._activeLanguage.asObservable();
+  get  activeLang(): string {
+    return this._activeLanguage.getValue();
+  }
 
   constructor(private http: HttpClient) {
     var browserLanguage = navigator.language;
@@ -29,7 +30,6 @@ export class TranslationService {
 
   setActiveLanguage(lang: string) {
     if (this.supportedLanguages.indexOf(lang) > -1) {
-      this.activeLang = lang;
       this._activeLanguage.next(lang);
     }
   }

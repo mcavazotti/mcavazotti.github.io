@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Project } from 'src/app/definitions/project.inteface';
 import { TranslationHelper } from 'src/app/helpers/translation-helper';
@@ -10,9 +10,9 @@ import { TranslationService } from 'src/app/services/translation.service';
   templateUrl: './detail-page.component.html',
   styleUrls: ['./detail-page.component.css']
 })
-export class DetailPageComponent implements OnInit {
+export class DetailPageComponent implements OnInit, OnDestroy {
   private projectTranslationHelper?: TranslationHelper;
-  private pageTranslationHelper?: TranslationHelper;
+  private pageTranslationHelper: TranslationHelper;
 
   @Input() id: string | null = null;
 
@@ -32,6 +32,12 @@ export class DetailPageComponent implements OnInit {
       this.errorMessage = translation.error;
       this.back = translation.back;
     })
+  }
+  ngOnDestroy(): void {
+    this.pageTranslationHelper.dispose();
+    if(this.projectTranslationHelper) {
+      this.projectTranslationHelper.dispose();
+    }
   }
 
   ngOnInit(): void {

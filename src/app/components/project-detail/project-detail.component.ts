@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Project } from 'src/app/definitions/project.inteface';
 import { TranslationHelper } from 'src/app/helpers/translation-helper';
 import { TranslationService } from 'src/app/services/translation.service';
@@ -8,7 +8,7 @@ import { TranslationService } from 'src/app/services/translation.service';
   templateUrl: './project-detail.component.html',
   styleUrls: ['./project-detail.component.css']
 })
-export class ProjectDetailComponent implements OnInit {
+export class ProjectDetailComponent implements OnInit, OnDestroy {
   private translationHelper?: TranslationHelper;
 
   @Input() project: Project = {
@@ -19,6 +19,11 @@ export class ProjectDetailComponent implements OnInit {
   briefing: string = '';
 
   constructor(private translationService: TranslationService) { }
+  ngOnDestroy(): void {
+    if(this.translationHelper) {
+      this.translationHelper.dispose();
+    }
+  }
 
   ngOnInit(): void {
     var translationFile = "projects/" + this.project.id;

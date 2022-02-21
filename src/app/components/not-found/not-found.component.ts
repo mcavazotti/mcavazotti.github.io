@@ -3,21 +3,19 @@ import { TranslationHelper } from 'src/app/helpers/translation-helper';
 import { TranslationService } from 'src/app/services/translation.service';
 
 @Component({
-  selector: 'app-about-page',
-  templateUrl: './about-page.component.html',
-  styleUrls: ['./about-page.component.css']
+  selector: 'app-not-found',
+  templateUrl: './not-found.component.html',
+  styleUrls: ['./not-found.component.css']
 })
-export class AboutPageComponent implements OnInit, OnDestroy {
+export class NotFoundComponent implements OnInit, OnDestroy {
   private translationHelper: TranslationHelper;
 
-  about: string = "";
-  content:string = "";
+  notFound: string = "";
 
 
   constructor(private translationService: TranslationService) {
-    this.translationHelper = new TranslationHelper("about-page", translationService, (translation) => {
-      this.about = translation.about;
-      this.content = translation.content;
+    this.translationHelper = new TranslationHelper("not-found", translationService, (translation) => {
+      this.notFound = translation.notFound;
     });
   }
   ngOnDestroy(): void {

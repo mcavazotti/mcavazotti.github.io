@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnDestroy, OnInit, Output } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { TranslationHelper } from 'src/app/helpers/translation-helper';
@@ -10,7 +10,7 @@ import { TranslationService } from 'src/app/services/translation.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
   openSideNav: boolean;
   
   private translationHelper: TranslationHelper;
@@ -25,11 +25,15 @@ export class NavbarComponent implements OnInit {
   about: string = "";
   projects: string = "";
 
+  inIFrame: boolean;
+
   constructor(private translationService: TranslationService, private router: Router, private sideNavService: SideNavService) {
+    this.inIFrame = window.location !== window.parent.location;
+
     this.supportedLanguages = translationService.getSupportedLanguages();
     this.activeLanguage = translationService.getActiveLanguage();
 
-    translationService.activeLanguage.subscribe((lang) => {
+    translationService.activeLanguage$.subscribe((lang) => {
       this.activeLanguage = lang;
     });
 
@@ -46,9 +50,12 @@ export class NavbarComponent implements OnInit {
     });
 
     this.openSideNav = sideNavService.getState();
-    sideNavService.isOpen.subscribe((s) => {
+    sideNavService.isOpen$.subscribe((s) => {
       this.openSideNav = s;
     })
+  }
+  ngOnDestroy(): void {
+    this.translationHelper.dispose();
   }
 
   ngOnInit(): void {
