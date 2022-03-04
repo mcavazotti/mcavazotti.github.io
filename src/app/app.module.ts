@@ -16,6 +16,7 @@ import { ProjectDetailComponent } from './components/project-detail/project-deta
 import { DetailPageComponent } from './components/detail-page/detail-page.component';
 import { LiveViewPageComponent } from './components/live-view-page/live-view-page.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { BackButtonComponent } from './components/back-button/back-button.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     ProjectDetailComponent,
     DetailPageComponent,
     LiveViewPageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserModule,

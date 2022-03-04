@@ -24,13 +24,11 @@ export class DetailPageComponent implements OnInit, OnDestroy {
   errorFlag: boolean = false;
   errorMessage: string = '';
   link: string = '';
-  back:string = '';
 
   constructor(private translationService: TranslationService, private projectsService: ProjectsService, private route: ActivatedRoute, ) {
     this.pageTranslationHelper = new TranslationHelper("detail-page", translationService, (translation) => {
       this.link = translation.link;
       this.errorMessage = translation.error;
-      this.back = translation.back;
     })
   }
   ngOnDestroy(): void {

@@ -1,6 +1,4 @@
-<div class="back">
-    <a routerLink="/projects">&#60;{{back}}</a>
-</div>
+<app-back-button></app-back-button>
 <div *ngIf="!errorFlag" id="detail-page">
     <div *ngIf="project != null" id="header">
         <img *ngIf="project.image" [src]="'assets/images/'+ project.image" alt="" id="proj-img">

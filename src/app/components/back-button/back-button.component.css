@@ -1,0 +1,8 @@
+.back {
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px 10px;
+    font-size: large;
+    font-weight: 600;
+    cursor: pointer;
+}

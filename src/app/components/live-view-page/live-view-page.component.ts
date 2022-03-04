@@ -12,13 +12,11 @@ import { TranslationService } from 'src/app/services/translation.service';
 export class LiveViewPageComponent implements OnInit, OnDestroy {
   private translationHelper: TranslationHelper;
   errorMessage: string = '';
-  back: string = '';
   id: string | null = null;
 
   constructor(private translationService: TranslationService, private route: ActivatedRoute, private domSanitizer: DomSanitizer) {
     this.translationHelper = new TranslationHelper("detail-page", translationService, (translation) => {
       this.errorMessage = translation.error;
-      this.back = translation.back;
     })
    }
   ngOnDestroy(): void {
