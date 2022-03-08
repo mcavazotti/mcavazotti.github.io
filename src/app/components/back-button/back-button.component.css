@@ -4,5 +4,7 @@
     margin: 15px 10px;
     font-size: large;
     font-weight: 600;
+}
+.back a {
     cursor: pointer;
 }

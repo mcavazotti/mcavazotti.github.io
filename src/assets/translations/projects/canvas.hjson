@@ -14,6 +14,14 @@
     <p>
     The repository contains many of these small programs, most of them made with pure HTML and JavaScript. Among them, the highlight goes to the planet simulation and the 2D hair simulation. 
     </p>
+    <p>
+    You can check some live demos here:
+    </p>
+    <ul>
+    <li><a href="live/simulator">Solar system simulator</a></li>
+    <li><a href="live/hair">2D hair simulator</a></li>
+    <li><a href="live/character">2D shooter concept</a></li>
+    </ul>
     '''
     pt-BR: 
     '''
@@ -23,6 +31,14 @@
     <p>
     O repositório contém vários desses pequenos programas, a maioria feito com HTML e JavaScript puros. Dentre esses programas, o destaque vai para o simulador de planetas e o simulador de cabelos em 2D.
     </p>
+    <p>
+    Você pode conferir alguns demos aqui:
+    </p>
+    <ul>
+    <li><a href="live/simulator">Simulador de sistema solar</a></li>
+    <li><a href="live/hair">Simulador de cabelos 2D</a></li>
+    <li><a href="live/character">Conceito de shooter 2D</a></li>
+    </ul>
     '''
   }
   name:

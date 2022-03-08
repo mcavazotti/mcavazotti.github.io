@@ -1,1 +1,10 @@
-<iframe [src]="getUrl()"></iframe>
+<app-back-button></app-back-button>
+<div id="live-content" *ngIf="validScreen; else invalid">
+    <p>{{message}}</p>
+    <iframe [src]="getUrl()"></iframe>
+</div>
+<ng-template #invalid>
+    <div id="invalid-screen">
+        <h3>{{errorMessage}}</h3>
+    </div>
+</ng-template>

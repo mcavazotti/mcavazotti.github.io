@@ -1,4 +1,5 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Project } from 'src/app/definitions/project.inteface';
 import { TranslationHelper } from 'src/app/helpers/translation-helper';
@@ -19,13 +20,13 @@ export class DetailPageComponent implements OnInit, OnDestroy {
   project: Project | null = { id: '' };
   name: string = '';
   briefing: string = '';
-  description: string = '';
+  description: SafeHtml = '';
 
   errorFlag: boolean = false;
   errorMessage: string = '';
   link: string = '';
 
-  constructor(private translationService: TranslationService, private projectsService: ProjectsService, private route: ActivatedRoute, ) {
+  constructor(private translationService: TranslationService, private projectsService: ProjectsService, private route: ActivatedRoute, private domSanitizer: DomSanitizer ) {
     this.pageTranslationHelper = new TranslationHelper("detail-page", translationService, (translation) => {
       this.link = translation.link;
       this.errorMessage = translation.error;
@@ -54,7 +55,7 @@ export class DetailPageComponent implements OnInit, OnDestroy {
           this.projectTranslationHelper = new TranslationHelper(translationFile, this.translationService, (translation) => {
             this.name = translation.name;
             this.briefing = translation.briefing;
-            this.description = translation.description;
+            this.description = this.domSanitizer.bypassSecurityTrustHtml(translation.description);
           });
         } else {
           this.errorFlag = true;
