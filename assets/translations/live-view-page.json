@@ -1,0 +1,10 @@
+{
+  "message": {
+    "en-US": "This content was designed to be used with mouse and/or keyboard",
+    "pt-BR": "Este conteúdo foi projetado para ser usado com mouse e/ou teclado"
+  },
+  "error": {
+    "en-US": "The screen size is too small to display this content properly",
+    "pt-BR": "O tamanho da tela é pequeno de mais para exibir este conteúdo corretamente"
+  }
+}
