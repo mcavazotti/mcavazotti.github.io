@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'foundation/colors' as *; 
+
+body {
+    background-color: $c-background;
+    color: $c-primary;
+}
+

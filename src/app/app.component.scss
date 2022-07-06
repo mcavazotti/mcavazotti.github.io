@@ -1,0 +1,51 @@
+@use '../foundation/colors' as *;
+@use '../foundation/mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700;900&display=swap');
+
+.main-div {
+    margin: 0 140px;
+}
+
+.nav-div {
+    margin-top: 33px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+
+    a {
+        font-family: 'Source Code Pro', monospace;
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: 0;
+        color: $c-primary;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin: 0 12px;
+
+        &.active {
+            text-decoration: underline;
+            font-weight: 900;
+        }
+    }
+}
+
+.playground-button {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 0;
+    color: $c-primary;
+    border: 1px solid $c-primary;
+    padding: 8px 16px;
+    border-radius: 4px;
+    @include default-transition;
+    
+    &:hover {
+        background-color: #0F9BEB33;
+    }
+}
