@@ -3,15 +3,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700;900&display=swap');
 
 .main-div {
-    margin: 0 7.3vw;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .nav-div {
+    margin: 0 7.3vw;
     margin-top: 33px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
+    div, nav, a {
+        z-index: 1;
+        backdrop-filter: blur(10px);
+        
+    }
 }
 
 .router-div {
