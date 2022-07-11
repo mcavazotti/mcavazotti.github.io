@@ -1,15 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
-@use 'foundation/colors' as *; 
+@use 'foundation/colors' as *;
 
 html {
-    // height: 100%;
-    
-}
-body {
-    min-height: 100vh;
-  padding: 0;
-    background-color: $c-background;
-    color: $c-primary;
-    margin: 0;
+  // height: 100%;
+
 }
 
+body {
+  // display: flex;
+  min-height: 100vh;
+  padding: 0;
+  background-color: $c-background;
+  color: $c-primary;
+  margin: 0;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}

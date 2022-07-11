@@ -4,7 +4,10 @@ import { SimController, Vector2 } from 'src/submodules/planets/src/simulator';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss']
+  styleUrls: ['./home-page.component.scss'],
+  host: {
+    class: "flex-grow-1 flex-column"
+  }
 })
 export class HomePageComponent implements OnInit {
   planetSim!: SimController;
