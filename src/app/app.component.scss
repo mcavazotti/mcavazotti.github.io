@@ -1,6 +1,6 @@
 @use '../foundation/colors' as *;
 @use '../foundation/mixins' as *;
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700;900&display=swap');
+
 
 // .main-div {
 //     display: flex;
@@ -18,9 +18,8 @@
     div,
     nav,
     a {
+        @include default-blur;
         z-index: 1;
-        backdrop-filter: blur(10px);
-
     }
 }
 
@@ -35,10 +34,8 @@ nav {
     padding: 5px;
 
     a {
-        font-family: 'Source Code Pro', monospace;
         font-weight: 500;
         font-size: 20px;
-        letter-spacing: 0;
         color: $c-primary;
         text-transform: uppercase;
         text-decoration: none;
