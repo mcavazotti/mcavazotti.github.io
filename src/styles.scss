@@ -1,13 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @use 'foundation/colors' as *;
+@use 'foundation/mixins' as *;
 
-html {
-  // height: 100%;
-
-}
 
 body {
-  // display: flex;
+  @include flex-column;
   min-height: 100vh;
   padding: 0;
   background-color: $c-background;
@@ -15,12 +12,7 @@ body {
   margin: 0;
 }
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-
-}
-
-.flex-grow-1 {
-  flex-grow: 1;
+app-root {
+  @include flex-column;
+  @include flex-grow-1;
 }

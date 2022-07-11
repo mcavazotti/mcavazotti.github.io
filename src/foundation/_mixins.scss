@@ -1,3 +1,17 @@
 @mixin default-transition {
     transition: 200ms ease-in-out;
 }
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+
+}
+
+@mixin flex-grow-1 {
+    flex-grow: 1;
+}
+
+@mixin default-border-radius {
+    border-radius: 8px;
+}

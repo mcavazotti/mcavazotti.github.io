@@ -6,7 +6,7 @@ import { SimController, Vector2 } from 'src/submodules/planets/src/simulator';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
   host: {
-    class: "flex-grow-1 flex-column"
+    class: "home-page"
   }
 })
 export class HomePageComponent implements OnInit {
