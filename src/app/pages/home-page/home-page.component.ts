@@ -11,6 +11,8 @@ import { SimController, Vector2 } from 'src/submodules/planets/src/simulator';
 })
 export class HomePageComponent implements OnInit {
   planetSim!: SimController;
+  hideContent:boolean = false;
+
   constructor() {
   }
 
@@ -20,6 +22,19 @@ export class HomePageComponent implements OnInit {
 
     this.planetSim = new SimController("planets", new Vector2(500, 0), true, false);
     this.planetSim.startSim();
+    let hide = () => {
+      console.log("aqui")
+      this.hideContent = true;
+    };
+    canvas.addEventListener("mousedown", hide);
+    canvas.addEventListener("keydown", hide);
+    canvas.addEventListener("blur", () => {
+      canvas.focus();
+    });
+
+      document.getElementById("content-div")?.addEventListener("click", () => {
+        this.hideContent = false;
+      });
   }
 
   private fitToContainer(canvas: HTMLCanvasElement) {

@@ -27,6 +27,7 @@
 .home-page {
     @include flex-column;
     @include flex-grow-1;
+    overflow: hidden;
 }
 
 nav {

@@ -1,0 +1,19 @@
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translate(0, 25%);
+    }
+    
+    to {
+        transform: translate(0, 0);
+    }
+}

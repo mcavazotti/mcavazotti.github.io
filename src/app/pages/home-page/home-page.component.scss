@@ -1,5 +1,6 @@
 @use '../../../foundation/mixins' as *;
 @use '../../../foundation/colors' as *;
+@use '../../../foundation/animations' as *;
 
 #planets {
     position: absolute;
@@ -19,26 +20,65 @@
 #content-div {
     @include default-border-radius;
     @include default-blur;
+    display: flex;
+    align-items: center;
     align-self: center;
     z-index: 1;
     grid-column-start: 7;
     grid-column-end: span 5;
     margin-top: 50px;
     padding: 10px;
+    // transform: translate(0,0);
+    transition: 700ms;
+    cursor: default;
 
     h1 {
+        animation-name: fade-in;
+        animation-duration: 700ms;
         margin-top: 0;
+    }
+
+    .tab {
+        margin: 0 16px;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-weight: bold;
     }
 }
 
+
+.hide {
+    transition: 700ms;
+    transform: translate(132%, 0);
+    background-color: $c-neutral-a25;
+}
+
 #controls {
+    @keyframes slow-fade-in {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 100%;
+        }
+    }
+
+    animation: slow-fade-in 1450ms,
+    slide-up 750ms 700ms;
+
     grid-column-start: 7;
     grid-column-end: span 5;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(6, 1fr);
     row-gap: 16px;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Source Sans 3',
+    sans-serif;
     font-size: 0.8vw;
 }
 
@@ -52,6 +92,7 @@
         margin: 0 4px;
         font-weight: bold;
     }
+
     .function {
         margin-left: 12px;
     }
