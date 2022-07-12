@@ -38,12 +38,7 @@
         margin-top: 0;
     }
 
-    .tab {
-        margin: 0 16px;
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-        font-weight: bold;
-    }
+    .tab {}
 }
 
 
@@ -51,6 +46,15 @@
     transition: 700ms;
     transform: translate(132%, 0);
     background-color: $c-neutral-a25;
+
+    &::before {
+        content: "Show controls";
+        margin: 0 16px;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-weight: bold;
+
+    }
 }
 
 #controls {
