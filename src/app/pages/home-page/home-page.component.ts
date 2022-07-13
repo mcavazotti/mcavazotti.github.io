@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SimController, Vector2 } from 'src/submodules/planets/src/simulator';
 
 @Component({
@@ -9,11 +9,15 @@ import { SimController, Vector2 } from 'src/submodules/planets/src/simulator';
     class: "home-page"
   }
 })
-export class HomePageComponent implements OnInit {
-  planetSim!: SimController;
+export class HomePageComponent implements OnInit, OnDestroy {
+  planetSim?: SimController;
   hideContent:boolean = false;
 
   constructor() {
+  }
+  ngOnDestroy(): void {
+    this.planetSim?.destroy();
+    delete this.planetSim;
   }
 
   ngOnInit(): void {
