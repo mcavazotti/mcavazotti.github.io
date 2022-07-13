@@ -9,6 +9,89 @@
     z-index: 0;
 }
 
+#greeting-div {
+    transition: 700ms;
+    position: fixed;
+    left: -10px;
+    bottom: 15%;
+    // max-width: 20.5vw;
+    font-family: 'Source Sans 3',
+    sans-serif;
+    font-size: 1.85vmin;
+
+    #profile-pic {
+        position: absolute;
+        z-index: 2;
+        animation: fade-in 700ms 3s, slide-down-50 700ms 3s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+
+
+        border-radius: 50%;
+        margin-left: 114px;
+        margin-top: -48px;
+        filter: grayscale(1);
+    }
+
+    &.hide {
+        transition: 700ms;
+        transform: translate(-85%, 0);
+        // background-color: $c-neutral-a25;
+
+        #greeting-content::after {
+            content: "Contact me";
+            display: inline-block;
+            margin: 0 16px;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            font-weight: bold;
+
+        }
+    }
+
+
+    #greeting-content {
+        @include default-border-radius;
+        @include default-blur;
+        display: flex;
+        align-items: center;
+        animation: slide-right-25 700ms 3s, fade-in 700ms 3s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+
+        background-color: #080514c7;
+        padding-left: 90px;
+        padding-top: 48px;
+        padding-bottom: 24px;
+
+        * {
+            margin: 8px 24px;
+        }
+        div {
+            margin: 0;
+        }
+    }
+
+    h3 {
+        color: $c-primary;
+    }
+
+    p {
+        max-width: 260px;
+        color: $c-neutral-0;
+
+    }
+
+    a {
+        display: block;
+        color: $c-primary;
+        margin-bottom: 24px;
+    }
+
+
+}
+
+
 #home-page-grid {
     margin: 0 7.3vw;
     display: grid;
@@ -32,48 +115,34 @@
     transition: 700ms;
     cursor: default;
 
+    &.hide {
+        transition: 700ms;
+        transform: translate(132%, 0);
+        background-color: $c-neutral-a25;
+
+        &::before {
+            content: "Show controls";
+            margin: 0 16px;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-weight: bold;
+
+        }
+    }
+
     h1 {
         animation-name: fade-in;
         animation-duration: 700ms;
         margin-top: 0;
     }
-
-    .tab {}
 }
 
 
-.hide {
-    transition: 700ms;
-    transform: translate(132%, 0);
-    background-color: $c-neutral-a25;
-
-    &::before {
-        content: "Show controls";
-        margin: 0 16px;
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-        font-weight: bold;
-
-    }
-}
 
 #controls {
-    @keyframes slow-fade-in {
-        0% {
-            opacity: 0;
-        }
-
-        50% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 100%;
-        }
-    }
-
-    animation: slow-fade-in 1450ms,
-    slide-up 750ms 700ms;
+    animation: fade-in 750ms 700ms, slide-up-25 750ms 700ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
 
     grid-column-start: 7;
     grid-column-end: span 5;

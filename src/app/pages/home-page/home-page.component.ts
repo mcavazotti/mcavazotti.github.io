@@ -35,6 +35,9 @@ export class HomePageComponent implements OnInit {
       document.getElementById("content-div")?.addEventListener("click", () => {
         this.hideContent = false;
       });
+      document.getElementById("greeting-div")?.addEventListener("click", () => {
+        this.hideContent = false;
+      });
   }
 
   private fitToContainer(canvas: HTMLCanvasElement) {

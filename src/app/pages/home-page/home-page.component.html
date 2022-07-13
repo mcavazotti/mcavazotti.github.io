@@ -2,10 +2,19 @@
     <div id="planet-div" class="flex-column flex-grow-1">
         <canvas id="planets" class="flex-grow-1" tabindex="0"></canvas>
     </div>
+    <div id="greeting-div" [ngClass]="{'hide': hideContent}">
+        <img id="profile-pic" src="assets/profile.jpg" height="96" alt="">
+        <div id="greeting-content">
+            <div>
+                <h3>Hello, I'm Matheus Cavazotti</h3>
+                <p>I'm a Brazilian developer deeply interested in computer graphics
+                    <br>
+                </p>
+                <a href="">Let's chat ></a>
+            </div>
+        </div>
+    </div>
     <div id="content-div" [ngClass]="{'hide': hideContent}">
-        <!-- <div *ngIf="hideContent" class="tab">
-            <span>Show controls</span>
-        </div> -->
         <div>
             <h1>Hey! Why don't you throw some planets?</h1>
             <div id="controls">
