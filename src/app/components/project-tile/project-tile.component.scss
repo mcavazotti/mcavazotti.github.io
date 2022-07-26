@@ -1,0 +1,23 @@
+@use '../../../style/colors' as *;
+@use '../../../style/mixins' as *;
+
+.outer-div {
+    border-radius: 24px;
+    height: 45vmin;
+    background-color: aquamarine;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 15px 0;
+    padding: 40px;
+}
+
+.info-div {
+    bottom: 0;
+    left: 0;
+    .main-info{
+        @include default-border-radius;
+        padding: 24px;
+        background-color: $c-neutral-100;
+    }
+}

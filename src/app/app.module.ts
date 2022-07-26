@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MarkdownModule } from 'ngx-markdown';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,8 @@ import { BlogPageComponent } from './pages/blog-page/blog-page.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { PlaygroundPageComponent } from './pages/playground-page/playground-page.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ProjectTileComponent } from './components/project-tile/project-tile.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { PlaygroundPageComponent } from './pages/playground-page/playground-page
     BlogPageComponent,
     ProjectsPageComponent,
     AboutPageComponent,
-    PlaygroundPageComponent
+    PlaygroundPageComponent,
+    ProjectTileComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
   ],
   providers: [],
   bootstrap: [AppComponent]

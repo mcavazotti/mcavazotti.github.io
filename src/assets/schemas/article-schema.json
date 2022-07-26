@@ -1,0 +1,35 @@
+{
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "date": {
+            "type": "string"
+        },
+        "tags": {
+            "type":"array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "relatedProjects": {
+            "type":"array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "coverImage": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "id",
+        "title",
+        "date",
+        "tags",
+        "relatedProjects"
+    ]
+}
