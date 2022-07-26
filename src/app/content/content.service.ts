@@ -25,7 +25,7 @@ export class ContentService {
   getProject(id: string): IProjectData | undefined {
     return this.projects.get(id);
   }
-  
+
   getArticles(): IArticleData[] {
     return [...this.articles.values()];
   }
@@ -34,16 +34,20 @@ export class ContentService {
     return this.articles.get(id);
   }
 
-  getRelatedArticles(projectId:string): IArticleData[] {
-    return Array.from(this.articles.values()).filter((article)=>article.relatedProjects.includes(projectId));
-  }
-  
-  getRelatedProjects(articleId:string): IProjectData[] {
-    let relatedProjects = this.articles.get(articleId)!.relatedProjects;
-    return Array.from(this.projects.values()).filter((project)=>relatedProjects.includes(project.id));
+  getRelatedArticles(projectId: string): IArticleData[] {
+    return Array.from(this.articles.values()).filter((article) => article.relatedProjects.includes(projectId));
   }
 
-  getMarkdown(path:string) {
-    return this.http.get(path,{responseType: "text"}).pipe(map(data => fm(data).body));
+  getRelatedProjects(articleId: string): IProjectData[] {
+    let relatedProjects = this.articles.get(articleId)!.relatedProjects;
+    return Array.from(this.projects.values()).filter((project) => relatedProjects.includes(project.id));
+  }
+
+  getMarkdown(path: string) {
+    return this.http.get(path, { responseType: "text" }).pipe(
+      map(data => {
+        console.log(fm(data).body);
+        return fm(data).body;
+      }));
   }
 }

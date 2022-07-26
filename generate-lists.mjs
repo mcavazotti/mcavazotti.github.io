@@ -32,9 +32,9 @@ async function* getFiles(dir) {
         }
         for (const project of metaData.relatedProjects) {
             if (relatedArticles.has(project)) {
-                relatedArticles.get(project).push({ title: metaData.title, date: metaData.date });
+                relatedArticles.get(project).push( metaData.id);
             } else {
-                relatedArticles.set(project, [{id: metaData.id ,title: metaData.title, date: metaData.date }]);
+                relatedArticles.set(project, [ metaData.id ]);
             }
         }
         const assetPath = f.substring(4)
@@ -58,8 +58,8 @@ async function* getFiles(dir) {
     }
 
 
-    fs.writeFile("src/app/article-list.gen.ts", `export const ARTICLE_LIST= ${JSON.stringify(articles, null, 4)};`);
-    fs.writeFile("src/app/project-list.gen.ts", `export const PROJECT_LIST= ${JSON.stringify(projects, null, 4)};`);
+    fs.writeFile("src/app/content/article-list.gen.ts", `export const ARTICLE_LIST= ${JSON.stringify(articles, null, 4)};`);
+    fs.writeFile("src/app/content/project-list.gen.ts", `export const PROJECT_LIST= ${JSON.stringify(projects, null, 4)};`);
     console.log(projects);
     console.log(articles);
 

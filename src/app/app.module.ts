@@ -13,6 +13,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ProjectTileComponent } from './components/project-tile/project-tile.component';
 import { ProjectDetailsPageComponent } from './pages/project-details-page/project-details-page.component';
 import { BackgroundService } from './background.service';
+import { ContentService } from './content/content.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BackgroundService } from './background.service';
     MarkdownModule.forRoot({ loader: HttpClient }),
   ],
   providers: [
-    BackgroundService
+    BackgroundService,
+    ContentService
   ],
   bootstrap: [AppComponent]
 })

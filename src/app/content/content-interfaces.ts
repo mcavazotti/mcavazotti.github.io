@@ -1,4 +1,5 @@
 interface IArticleData {
+    path:string;
     id: string;
     title: string;
     date: string;
@@ -8,6 +9,7 @@ interface IArticleData {
 }
 
 interface IProjectData {
+    path:string;
     id: string;
     title: string;
     description?: string;
@@ -15,6 +17,7 @@ interface IProjectData {
     endYear?: number;
     coverImage?: string;
     projectLink?: string;
+    relatedArticles:string[];
     tags: string[];
 
 }
