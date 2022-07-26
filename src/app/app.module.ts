@@ -11,6 +11,8 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { PlaygroundPageComponent } from './pages/playground-page/playground-page.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ProjectTileComponent } from './components/project-tile/project-tile.component';
+import { ProjectDetailsPageComponent } from './pages/project-details-page/project-details-page.component';
+import { BackgroundService } from './background.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { ProjectTileComponent } from './components/project-tile/project-tile.com
     ProjectsPageComponent,
     AboutPageComponent,
     PlaygroundPageComponent,
-    ProjectTileComponent
+    ProjectTileComponent,
+    ProjectDetailsPageComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,9 @@ import { ProjectTileComponent } from './components/project-tile/project-tile.com
     HttpClientModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
   ],
-  providers: [],
+  providers: [
+    BackgroundService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

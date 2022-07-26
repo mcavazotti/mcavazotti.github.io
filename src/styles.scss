@@ -6,15 +6,15 @@
 
 
 body {
-  @include flex-column;
-  min-height: 100vh;
-  padding: 0;
-  background-color: $c-background;
-  color: $c-primary;
+//   @include flex-column;
+//   min-height: 100vh;
+//   padding: 0;
+//   background-color: $c-background;
+//   color: $c-primary;
   margin: 0;
 
-  font-family: 'Source Code Pro', monospace;
-  letter-spacing: 0;
+//   font-family: 'Source Code Pro', monospace;
+//   letter-spacing: 0;
 }
 
 app-root {
@@ -25,6 +25,14 @@ app-root {
 h1 {
   font-size: 8vmin;
   font-weight: bold;
+}
+
+h3.block-header {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: $c-primary;
+  margin: 0;
 }
 
 .page-content {

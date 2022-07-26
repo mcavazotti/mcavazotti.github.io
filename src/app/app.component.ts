@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { BackgroundService } from './background.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'site_novo';
+  dark: Observable<boolean>;
+
+  constructor(private bgService: BackgroundService) {
+    this.dark = bgService.dark$;
+  }
 }

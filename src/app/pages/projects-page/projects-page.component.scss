@@ -1,0 +1,5 @@
+@use '../../../style/mixins' as *;
+
+.page-content {
+    @include default-fade-in;
+}

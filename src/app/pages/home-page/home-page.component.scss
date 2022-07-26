@@ -131,8 +131,7 @@
     }
 
     h1 {
-        animation-name: fade-in;
-        animation-duration: 700ms;
+        @include default-fade-in;
         margin-top: 0;
     }
 }

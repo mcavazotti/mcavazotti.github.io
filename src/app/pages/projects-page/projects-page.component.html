@@ -1,4 +1,12 @@
 <div class="page-content">
     <h1>Projects.</h1>
-    <app-project-tile *ngFor="let project of projects" [title]="project.title" [coverImage]="project.coverImage"></app-project-tile>
+    <app-project-tile *ngFor="let project of projects" 
+        [title]="project.title" 
+        [coverImage]="project.coverImage"
+        [startYear]="project.startYear"
+        [description]="project.description"
+        [tags]="project.tags"
+        (click) = "navigate(project.id)"
+    >
+    </app-project-tile>
 </div>

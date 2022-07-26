@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {PROJECT_LIST} from '../../project-list.gen'
 
 @Component({
@@ -8,9 +9,13 @@ import {PROJECT_LIST} from '../../project-list.gen'
 })
 export class ProjectsPageComponent implements OnInit {
   projects = PROJECT_LIST;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  navigate(id:string) {
+    this.router.navigate(["projects",id]);
   }
 
 }

@@ -1,7 +1,13 @@
 @use './colors' as *;
+@use './animations' as *;
 
 @mixin default-transition {
-    transition: 200ms ease-in-out;
+    transition: 300ms ease-in-out;
+}
+
+@mixin default-fade-in {
+    animation-name: fade-in;
+    animation-duration: 700ms;
 }
 
 @mixin flex-column {

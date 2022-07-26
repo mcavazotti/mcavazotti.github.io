@@ -2,10 +2,22 @@
 @use '../style/mixins' as *;
 
 
-// .main-div {
-//     display: flex;
-//     flex-direction: column-reverse;
-// }
+.main-div {
+    @include flex-column;
+    @include default-transition;
+    min-height: 100vh;
+    padding: 0;
+    background-color: $c-background;
+    color: $c-primary;
+    margin: 0;
+  
+    font-family: 'Source Code Pro', monospace;
+    letter-spacing: 0;
+
+    &.dark{
+        background-color: $c-neutral-100 !important;
+    }
+}
 
 .nav-div {
     margin: 0 7.3vw;

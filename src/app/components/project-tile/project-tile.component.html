@@ -1,7 +1,9 @@
-<div class="outer-div" [ngStyle]="coverImage ? {'background-image': 'url('+coverImage+')'}: null">
-    <div class="info-div" >
-        <div class="main-info">
-            {{title}}
-        </div>
+<div class="outer-div" [ngStyle]="{'background-image':coverImage ? 'url('+coverImage+')': generatePattern(title).toDataUrl()}" (click)="tileClicked()">
+    <div *ngIf="startYear !== undefined" class="date-div">{{startYear}}</div>
+    <div class="info-div">
+        <h3 class="block-header">{{title}}</h3>
+        <p class="description">{{description}}</p>
+        <p class="tags"><span class="tag" *ngFor="let tag of tags">{{tag}}</span></p>
     </div>
+
 </div>
