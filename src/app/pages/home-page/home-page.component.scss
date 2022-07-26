@@ -3,6 +3,7 @@
 @use '../../../style/animations' as *;
 
 #planets {
+    @include default-fade-in;
     position: absolute;
     top: 0;
     left: 0;

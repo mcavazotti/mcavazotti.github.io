@@ -1,1 +1,18 @@
-<p>project-details-page works!</p>
+
+<div class="text-page">
+    <ng-container *ngIf="!loadError; else error">
+        <div class="tags">
+            <span *ngFor="let tag of project!.tags">{{tag}}</span>
+        </div>
+        <h1>{{project!.title}}.</h1>
+        <div class="date"><span>{{project!.startYear}}</span></div>
+        
+        <markdown [data]="(markdown$|async)??undefined"></markdown>
+        <div class="related-articles">
+            <h3>Related Articles</h3>
+        </div>
+    </ng-container>
+    <ng-template #error>
+        Something went wrong :/
+    </ng-template>
+</div>

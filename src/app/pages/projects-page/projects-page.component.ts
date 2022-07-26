@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {PROJECT_LIST} from '../../project-list.gen'
+import { IProjectData } from 'src/app/content/content-interfaces';
+import { ContentService } from 'src/app/content/content.service';
 
 @Component({
   selector: 'app-projects-page',
@@ -8,8 +9,13 @@ import {PROJECT_LIST} from '../../project-list.gen'
   styleUrls: ['./projects-page.component.scss']
 })
 export class ProjectsPageComponent implements OnInit {
-  projects = PROJECT_LIST;
-  constructor(private router: Router) { }
+
+  projects: IProjectData[];
+
+  constructor(private router: Router, private contentService: ContentService) {
+
+    this.projects = contentService.getProjects();
+   }
 
   ngOnInit(): void {
   }
