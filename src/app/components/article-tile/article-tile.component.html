@@ -1,0 +1,13 @@
+<div class="outer-div">
+    <div class="cover-div" [ngStyle]="{'background-image':coverImage ? 'url('+coverImage+')': generatePattern(title).toDataUrl()}">
+        <span class="date" *ngIf="date.length != 0">{{formattedDate}}</span>
+    </div>
+    <div class="content-div">
+        <div>
+            <div class="tags"><span class="small-tag" *ngFor="let tag of tags">{{tag}}</span></div>
+            <h3>{{title}}</h3>
+            <p>{{abstract}}</p>
+        </div>
+        <span>Read full article ></span>
+    </div>
+</div>

@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -29,7 +28,6 @@ export class ProjectDetailsPageComponent implements OnInit, OnDestroy {
       this.project = this.content.getProject(id);
 
       if(!this.project) {
-        console.log("aqui")
         this.loadError = true;
         return;
       }

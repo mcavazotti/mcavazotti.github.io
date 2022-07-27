@@ -1,9 +1,9 @@
 ---
 id: a
 title: a Title
-date: "2022"
+date: "20220704"
 tags: [c]
-relatedProjects: ["test"]
+relatedProjects: [test]
 ---
 
 # a Title

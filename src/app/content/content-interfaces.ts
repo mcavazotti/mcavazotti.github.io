@@ -3,6 +3,7 @@ interface IArticleData {
     id: string;
     title: string;
     date: string;
+    abstract?: string;
     coverImage?: string;
     tags: string[];
     relatedProjects: string[];
