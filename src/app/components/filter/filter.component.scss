@@ -1,0 +1,18 @@
+:host {
+    max-width: 40%;
+}
+
+.tags-div {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+p {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 16px;
+    margin: 12px 0 ;
+}
+.tag {
+    cursor: pointer;
+}

@@ -1,6 +1,9 @@
 <div class="page-content">
-    <h1>Projects.</h1>
-    <app-project-tile *ngFor="let project of projects" 
+    <div class="header">
+        <h1>Projects.</h1>
+        <app-filter [tags]="tags" (change)="filterProjects($event)"></app-filter>
+    </div>
+    <app-project-tile *ngFor="let project of filteredProjects" 
         [title]="project.title" 
         [coverImage]="project.coverImage"
         [startYear]="project.startYear"

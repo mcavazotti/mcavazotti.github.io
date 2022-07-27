@@ -14,6 +14,7 @@ import { ProjectTileComponent } from './components/project-tile/project-tile.com
 import { ProjectDetailsPageComponent } from './pages/project-details-page/project-details-page.component';
 import { BackgroundService } from './background.service';
 import { ContentService } from './content/content.service';
+import { FilterComponent } from './components/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContentService } from './content/content.service';
     AboutPageComponent,
     PlaygroundPageComponent,
     ProjectTileComponent,
-    ProjectDetailsPageComponent
+    ProjectDetailsPageComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

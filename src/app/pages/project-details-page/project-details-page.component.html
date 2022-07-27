@@ -2,7 +2,7 @@
 <div class="text-page">
     <ng-container *ngIf="!loadError; else error">
         <div class="tags">
-            <span *ngFor="let tag of project!.tags">{{tag}}</span>
+            <span class="tag" *ngFor="let tag of project!.tags">{{tag}}</span>
         </div>
         <h1>{{project!.title}}.</h1>
         <div class="date"><span>{{project!.startYear}}</span></div>

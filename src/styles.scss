@@ -80,3 +80,21 @@ h3.block-header {
     color: $c-neutral-0  !important;
   }
 }
+
+span.tag {
+  @include default-border-radius;
+  @include default-transition;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: $c-primary;
+  background-color: $c-primary-a10;
+  padding: 8px 16px;
+  text-transform: uppercase;
+
+  &.active {
+    @include default-transition;
+    color: $c-neutral-100;
+    background-color: $c-primary;
+  }
+}

@@ -8,17 +8,6 @@
 .tags{
     display: flex;
     gap: 4px;
-
-    span {
-        @include default-border-radius;
-        font-family: 'Source Sans 3', sans-serif;
-        font-weight: bold;
-        font-size: 20px;
-        color: $c-primary;
-        background-color: $c-primary-a10;
-        padding: 8px 16px;
-        text-transform: uppercase;
-    } 
 }
 
 .date {

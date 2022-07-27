@@ -3,3 +3,13 @@
 .page-content {
     @include default-fade-in;
 }
+
+.header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    h1{
+        margin-top: 0;
+    }
+}
