@@ -47,12 +47,14 @@ p {
         color: $c-neutral-0;
     }
 
-    &.tags {
-        margin-bottom: 0;
-    }
+}
+.tags {
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-span.tag {
+span.small-tag {
     font-family: 'Source Sans 3', sans-serif;
     font-weight: normal;
     font-size: 16px;
