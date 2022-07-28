@@ -9,6 +9,9 @@
     cursor: pointer;
     // display: flex;
     // flex-direction: column;
+    &.alt-color {
+        background-color: $c-alt-background-a20;
+    }
 }
 
 .cover-div {

@@ -8,9 +8,9 @@
         <div class="date"><span>{{formatDate(article!.date)}}</span></div>
         
         <markdown [data]="(markdown$|async)??undefined"></markdown>
-        <div class="related-projects">
+        <!-- <div class="related-projects">
             <h3>Related Projects</h3>
-        </div>
+        </div> -->
     </ng-container>
     <ng-template #error>
         Something went wrong :/

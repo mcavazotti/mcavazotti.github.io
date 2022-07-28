@@ -12,6 +12,7 @@ export class ArticleTileComponent implements OnInit {
   @Input() coverImage?: string;
   @Input() date: string = "";
   @Input() tags: string[] = [];
+  @Input() altColor: boolean = false;
   @Output() click: EventEmitter<void> = new EventEmitter();
 
   formattedDate: string = "";

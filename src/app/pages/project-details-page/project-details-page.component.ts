@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { BackgroundService } from 'src/app/background.service';
-import { IProjectData } from 'src/app/content/content-interfaces';
+import { IArticleData, IProjectData } from 'src/app/content/content-interfaces';
 import { ContentService } from 'src/app/content/content.service';
 
 @Component({
@@ -13,12 +13,13 @@ import { ContentService } from 'src/app/content/content.service';
 export class ProjectDetailsPageComponent implements OnInit, OnDestroy {
   project?: IProjectData;
   markdown$?: Observable<string>;
+  relatedArticles?: IArticleData[];
 
   loadError: boolean = false;
 
 
 
-  constructor(private bgService: BackgroundService, private content: ContentService, private route: ActivatedRoute) {
+  constructor(private bgService: BackgroundService, private content: ContentService, private route: ActivatedRoute, private router: Router) {
     bgService.darkState(true);
   }
 
@@ -26,6 +27,7 @@ export class ProjectDetailsPageComponent implements OnInit, OnDestroy {
     this.route.paramMap.subscribe((params) => {
       let id = params.get("id")!;
       this.project = this.content.getProject(id);
+      this.relatedArticles = this.content.getRelatedArticles(id).sort((a,b)=> a.date.localeCompare(b.date));
 
       if(!this.project) {
         this.loadError = true;
@@ -39,6 +41,10 @@ export class ProjectDetailsPageComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.bgService.darkState(false);
+  }
+
+  navigate(id: string) {
+    this.router.navigate(["blog", id]);
   }
 
 }

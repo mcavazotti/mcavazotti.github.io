@@ -1,4 +1,4 @@
-<div class="outer-div">
+<div class="outer-div" [ngClass]="{'alt-color': altColor}">
     <div class="cover-div" [ngStyle]="{'background-image':coverImage ? 'url('+coverImage+')': generatePattern(title).toDataUrl()}">
         <span class="date" *ngIf="date.length != 0">{{formattedDate}}</span>
     </div>

@@ -5,7 +5,7 @@
     @include default-fade-in;
 }
 
-.tags{
+.tags {
     display: flex;
     gap: 4px;
 }
@@ -21,7 +21,15 @@
 .related-articles {
     border-top: 1px solid $c-primary;
     margin-top: 48px;
+
     h3 {
         margin-top: 16px;
+    }
+
+    .related-articles-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 16px;
+        row-gap: 40px;
     }
 }
