@@ -1,0 +1,29 @@
+@use '../../../style/colors' as *;
+
+.page-content {
+    display: flex;
+}
+
+#profile-pic {
+    border-radius: 50%;
+    filter: grayscale(1);
+}
+
+.contact {
+    margin: 0 120px;
+}
+
+.content {
+    margin-right: 120px;
+
+    h1 {
+        margin-top: 0;
+    }
+
+    p {
+        font-family: 'Source Sans 3', sans-serif;
+        font-weight: normal;
+        font-size: 20px;
+        color: $c-neutral-0;
+    }
+}
