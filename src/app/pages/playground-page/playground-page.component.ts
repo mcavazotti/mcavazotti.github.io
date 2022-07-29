@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faPersonDigging } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-playground-page',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./playground-page.component.scss']
 })
 export class PlaygroundPageComponent implements OnInit {
-
+  
+  constructionIcon = faPersonDigging;
+  
   constructor() { }
 
   ngOnInit(): void {
