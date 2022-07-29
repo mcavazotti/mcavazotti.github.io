@@ -46,7 +46,7 @@ export class ContentService {
   getMarkdown(path: string) {
     return this.http.get(path, { responseType: "text" }).pipe(
       map(data => {
-        console.log(fm(data).body);
+        // console.log(fm(data).body);
         return fm(data).body;
       }));
   }

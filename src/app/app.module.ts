@@ -18,6 +18,8 @@ import { FilterComponent } from './components/filter/filter.component';
 import { ArticleTileComponent } from './components/article-tile/article-tile.component';
 import { ArticlePageComponent } from './pages/article-page/article-page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FooterComponent } from './components/footer/footer.component';
+import { FooterService } from './components/footer/footer.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ProjectDetailsPageComponent,
     FilterComponent,
     ArticleTileComponent,
-    ArticlePageComponent
+    ArticlePageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   ],
   providers: [
     BackgroundService,
-    ContentService
+    ContentService,
+    FooterService
   ],
   bootstrap: [AppComponent]
 })

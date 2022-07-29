@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { BackgroundService } from 'src/app/background.service';
+import { FooterService } from 'src/app/components/footer/footer.service';
 import { IArticleData, IProjectData } from 'src/app/content/content-interfaces';
 import { ContentService } from 'src/app/content/content.service';
 
@@ -19,11 +20,13 @@ export class ProjectDetailsPageComponent implements OnInit, OnDestroy {
 
 
 
-  constructor(private bgService: BackgroundService, private content: ContentService, private route: ActivatedRoute, private router: Router) {
-    bgService.darkState(true);
+  constructor(private bgService: BackgroundService, private content: ContentService, private route: ActivatedRoute, private router: Router, private footerService: FooterService) {
   }
-
+  
   ngOnInit(): void {
+    this.footerService.showBorder();
+    this.bgService.darkState(true);
+
     this.route.paramMap.subscribe((params) => {
       let id = params.get("id")!;
       this.project = this.content.getProject(id);
@@ -41,6 +44,7 @@ export class ProjectDetailsPageComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.bgService.darkState(false);
+    this.footerService.hideBorder();
   }
 
   navigate(id: string) {
