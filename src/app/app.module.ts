@@ -17,6 +17,7 @@ import { ContentService } from './content/content.service';
 import { FilterComponent } from './components/filter/filter.component';
 import { ArticleTileComponent } from './components/article-tile/article-tile.component';
 import { ArticlePageComponent } from './pages/article-page/article-page.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ArticlePageComponent } from './pages/article-page/article-page.componen
     AppRoutingModule,
     HttpClientModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
+    FontAwesomeModule
   ],
   providers: [
     BackgroundService,
