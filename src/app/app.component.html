@@ -1,0 +1,17 @@
+<div class="main-div"  [ngClass]="{'dark': (dark | async)}">
+  <div class="nav-div">
+    <!-- empty div to help centering -->
+    <div></div>
+    <nav>
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+      <a routerLink="/blog" routerLinkActive="active">Blog</a>
+      <a routerLink="/projects" routerLinkActive="active">Projects</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+    </nav>
+    <a routerLink="/playground" class="playground-button">Playground ></a>
+  </div>
+  <div class="router-div">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+</div>

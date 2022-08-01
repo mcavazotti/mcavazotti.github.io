@@ -1,0 +1,16 @@
+<div class="page-content">
+    <div class="header">
+        <h1>Blog.</h1>
+        <app-filter [tags]="tags" (change)="filterArticles($event)"></app-filter>
+    </div>
+    <div class="articles-grid">
+        <app-article-tile *ngFor="let article of filteredArticles"
+            [title]="article.title"
+            [coverImage]="article.coverImage"
+            [abstract]="article.abstract"
+            [tags]="article.tags"
+            [date]="article.date"
+            (click)="navigate(article.id)"
+        ></app-article-tile>
+    </div>
+</div>
