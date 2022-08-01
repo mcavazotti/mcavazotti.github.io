@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "personal-page": {
+    "site_novo": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
+        "@schematics/angular:component": {
+          "style": "scss"
         }
       },
       "root": "",
@@ -17,30 +17,35 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/personal-page",
+            "outputPath": "dist/site_novo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "src/assets/",
-                "ignore": [
-                  "**/*.hjson"
-                ],
-                "output": "/assets/"
-              },
               {
                 "glob": "favicon.ico",
                 "input": "src/",
                 "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/content",
+                "output": "/content/"
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/marked/marked.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -79,10 +84,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "personal-page:build:production"
+              "browserTarget": "site_novo:build:production"
             },
             "development": {
-              "browserTarget": "personal-page:build:development"
+              "browserTarget": "site_novo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,7 +95,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "personal-page:build"
+            "browserTarget": "site_novo:build"
           }
         },
         "test": {
@@ -100,31 +105,18 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
+            "inlineStyleLanguage": "scss",
             "assets": [
-             {
-              "glob": "**/*",
-              "input": "src/assets/",
-              "ignore": [
-                "**/*.hjson"
-              ],
-              "output": "/assets/"
-            },
-            {
-              "glob": "favicon.ico",
-              "input": "src/",
-              "output": "/"
-            }
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }

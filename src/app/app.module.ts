@@ -1,44 +1,53 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MarkdownModule } from 'ngx-markdown';
 
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { TranslationService } from './services/translation.service';
-import { HttpClientModule } from '@angular/common/http';
-import { MainPageComponent } from './components/main-page/main-page.component';
-import { AboutPageComponent } from './components/about-page/about-page.component';
-import { ProjectsPageComponent } from './components/projects-page/projects-page.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { AppComponent } from './app.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { BlogPageComponent } from './pages/blog-page/blog-page.component';
+import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { PlaygroundPageComponent } from './pages/playground-page/playground-page.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ProjectTileComponent } from './components/project-tile/project-tile.component';
+import { ProjectDetailsPageComponent } from './pages/project-details-page/project-details-page.component';
+import { BackgroundService } from './background.service';
+import { ContentService } from './content/content.service';
+import { FilterComponent } from './components/filter/filter.component';
+import { ArticleTileComponent } from './components/article-tile/article-tile.component';
+import { ArticlePageComponent } from './pages/article-page/article-page.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { SideNavService } from './services/side-nav.service';
-import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
-import { DetailPageComponent } from './components/detail-page/detail-page.component';
-import { LiveViewPageComponent } from './components/live-view-page/live-view-page.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import { BackButtonComponent } from './components/back-button/back-button.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { FooterService } from './components/footer/footer.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent,
-    AboutPageComponent,
+    HomePageComponent,
+    BlogPageComponent,
     ProjectsPageComponent,
-    NavbarComponent,
-    FooterComponent,
-    ProjectDetailComponent,
-    DetailPageComponent,
-    LiveViewPageComponent,
-    NotFoundComponent,
-    BackButtonComponent
+    AboutPageComponent,
+    PlaygroundPageComponent,
+    ProjectTileComponent,
+    ProjectDetailsPageComponent,
+    FilterComponent,
+    ArticleTileComponent,
+    ArticlePageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
     FontAwesomeModule
   ],
-  providers: [TranslationService, SideNavService],
+  providers: [
+    BackgroundService,
+    ContentService,
+    FooterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

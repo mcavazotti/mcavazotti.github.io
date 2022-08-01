@@ -1,30 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutPageComponent } from './components/about-page/about-page.component';
-import { DetailPageComponent } from './components/detail-page/detail-page.component';
-import { LiveViewPageComponent } from './components/live-view-page/live-view-page.component';
-import { MainPageComponent } from './components/main-page/main-page.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import { ProjectsPageComponent } from './components/projects-page/projects-page.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { ArticlePageComponent } from './pages/article-page/article-page.component';
+import { BlogPageComponent } from './pages/blog-page/blog-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { PlaygroundPageComponent } from './pages/playground-page/playground-page.component';
+import { ProjectDetailsPageComponent } from './pages/project-details-page/project-details-page.component';
+import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 
-const appRoutes: Routes = [
-  {path:'about', component: AboutPageComponent},
-  {path:'projects', component: ProjectsPageComponent},
-  {path:'live/:id', component: LiveViewPageComponent},
-  {path:'projects/:id', component: DetailPageComponent},
-  {path:'main', component: MainPageComponent},
-  {path:'404', component: NotFoundComponent},
-  { path: '', redirectTo: 'main', pathMatch: 'full'},
-  { path: '**', redirectTo: '404', pathMatch: 'full' },
-]
+const routes: Routes = [
+  {path:"home", component: HomePageComponent},
+  {path:"blog", component: BlogPageComponent},
+  {path:"blog/:id", component: ArticlePageComponent},
+  {path:"projects", component: ProjectsPageComponent},
+  {path:"projects/:id", component: ProjectDetailsPageComponent},
+  {path:"about", component: AboutPageComponent},
+  {path:"playground", component: PlaygroundPageComponent},
+  {path:"", redirectTo:"home", pathMatch:"full"}
+];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    RouterModule.forRoot(appRoutes)
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,0 +1,37 @@
+{
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "startYear": {
+            "type": "number"
+        },
+        "tags": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "coverImage": {
+            "type": "string"
+        },
+        "projectLink": {
+            "type": "string"
+        },
+        "endYear": {
+            "type": "number"
+        }
+    },
+    "required": [
+        "id",
+        "title",
+        "startYear",
+        "tags"
+    ]
+}

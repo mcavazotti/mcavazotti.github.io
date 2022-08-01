@@ -1,0 +1,35 @@
+@use '../../../style/colors' as *;
+@use '../../../style/mixins' as *;
+
+.text-page {
+    @include default-fade-in;
+}
+
+.tags {
+    display: flex;
+    gap: 4px;
+}
+
+.date {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $c-primary;
+    text-align: right;
+}
+
+.related-articles {
+    border-top: 1px solid $c-primary;
+    margin-top: 48px;
+
+    h3 {
+        margin-top: 16px;
+    }
+
+    .related-articles-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 16px;
+        row-gap: 40px;
+    }
+}

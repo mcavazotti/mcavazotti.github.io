@@ -1,31 +1,28 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { faGithubSquare, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { TranslationHelper } from 'src/app/helpers/translation-helper';
-import { TranslationService } from 'src/app/services/translation.service';
+import { Component, OnInit } from '@angular/core';
+import { faLinkedinIn, faGithubAlt, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { Observable } from 'rxjs';
+import { FooterService } from './footer.service';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit, OnDestroy {
-  private translationHelper: TranslationHelper;
+export class FooterComponent implements OnInit {
 
-  linkedInIcon = faLinkedin;
-  githubIcon = faGithubSquare;
+  showFooter$: Observable<boolean>;
+  showIcons$: Observable<boolean>;
+  showBorder$: Observable<boolean>;
+
+  linkedInIcon = faLinkedinIn;
+  githubIcon = faGithubAlt;
   instagramIcon = faInstagram;
 
-  footerMessage: string = '';
-
-
-  constructor(private translationService: TranslationService) {
-    this.translationHelper = new TranslationHelper("footer", translationService, (translation) => {
-      this.footerMessage = translation.message;
-    });
-  }
-  ngOnDestroy(): void {
-    this.translationHelper.dispose();
-  }
+  constructor(private footerService: FooterService) {
+    this.showFooter$ = footerService.showFooter$;
+    this.showIcons$ = footerService.showIcons$;
+    this.showBorder$ = footerService.showBorder$;
+   }
 
   ngOnInit(): void {
   }

@@ -1,21 +1,17 @@
-<div id="app-container">
-    <app-navbar></app-navbar>
-    <div id="page-container">
-        <!-- improve it -->
-        <div class="fixed">
-            <div class="overlay" [ngClass]="{'opaque':openSideNav}"></div>
-        </div>
-        <div class="fixed">
-            <div class="side-nav" [ngClass]="{'closed':!openSideNav}">
-                <div id="link-list">
-                    <a (click)="closeSideNav()" class="link" routerLink="/about">{{about}}</a>
-                    <a (click)="closeSideNav()" class="link" routerLink="/projects">{{projects}}</a>
-                </div>
-            </div>
-        </div>
-        <div class="width-limiter">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-    <app-footer></app-footer>
+<div class="main-div"  [ngClass]="{'dark': (dark | async)}">
+  <div class="nav-div">
+    <!-- empty div to help centering -->
+    <div></div>
+    <nav>
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+      <a routerLink="/blog" routerLinkActive="active">Blog</a>
+      <a routerLink="/projects" routerLinkActive="active">Projects</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+    </nav>
+    <a routerLink="/playground" class="playground-button">Playground ></a>
+  </div>
+  <div class="router-div">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
 </div>
