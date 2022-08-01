@@ -1,4 +1,15 @@
 <footer [ngClass]="{'hide': !(showFooter$ | async), 'border': (showBorder$ | async)}">
     <span>This site was designed by <a href="https://www.linkedin.com/in/sheisacreative/">Maiane</a> and implemented by
         me using <a href="https://angular.io/">Angular</a></span>
+    <div id="icons" *ngIf="(showIcons$ | async)">
+        <a href="https://www.instagram.com/matheuscavazotti/" title="Instagram">
+            <fa-icon [fixedWidth]="true" size="2x" [icon]="instagramIcon"></fa-icon>
+        </a>
+        <a href="https://www.linkedin.com/in/matheus-cavazotti" title="LinkedIn">
+            <fa-icon [fixedWidth]="true" size="2x" [icon]="linkedInIcon"></fa-icon>
+        </a>
+        <a href="https://github.com/mcavazotti" title="GitHub">
+            <fa-icon [fixedWidth]="true" size="2x" [icon]="githubIcon"></fa-icon>
+        </a>
+    </div>
 </footer>

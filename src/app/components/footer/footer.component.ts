@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faLinkedinIn, faGithubAlt, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { Observable } from 'rxjs';
 import { FooterService } from './footer.service';
 
@@ -12,6 +13,11 @@ export class FooterComponent implements OnInit {
   showFooter$: Observable<boolean>;
   showIcons$: Observable<boolean>;
   showBorder$: Observable<boolean>;
+
+  linkedInIcon = faLinkedinIn;
+  githubIcon = faGithubAlt;
+  instagramIcon = faInstagram;
+
   constructor(private footerService: FooterService) {
     this.showFooter$ = footerService.showFooter$;
     this.showIcons$ = footerService.showIcons$;
