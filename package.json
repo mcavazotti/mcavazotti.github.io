@@ -6,6 +6,7 @@
     "start": "node generate-lists.mjs && ng serve",
     "build": "node generate-lists.mjs && ng build",
     "watch": "node generate-lists.mjs && ng build --watch --configuration development",
+    "deploy": "node generate-lists.mjs && ng build --output-path docs",
     "test": "ng test"
   },
   "private": true,
