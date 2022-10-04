@@ -5,7 +5,7 @@
 scully/**/*.js
 scully/**/*.js.map
 scully.log
-assets/scully-routes.json
+src/assets/scully-routes.json
 scully.personal-page.config.js
 
 # Compiled output
