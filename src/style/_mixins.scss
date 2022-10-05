@@ -1,0 +1,33 @@
+@use './colors' as *;
+@use './animations' as *;
+
+@mixin default-transition {
+    transition: 300ms ease-in-out;
+}
+
+@mixin default-fade-in {
+    animation-name: fade-in;
+    animation-duration: 700ms;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+
+}
+
+@mixin flex-grow-1 {
+    flex-grow: 1;
+}
+
+@mixin default-border-radius {
+    border-radius: 8px;
+}
+
+@mixin default-blur {
+    backdrop-filter: blur(5px);
+}
+
+@mixin bg-primary-10 {
+    background-color: $c-primary-a10;
+}
