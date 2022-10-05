@@ -1,0 +1,54 @@
+@use "../../../style/variables" as *;
+@use "../../../style/colors" as *;
+@use "../../../style/animations" as *;
+@import "../../../style/third-party/typed.scss";
+
+#profile-pic {
+    animation: fade-in 1.5s;
+    border-radius: 50%;
+    width: 30vmin;
+    min-width: 100px;
+    max-width: 300px;
+    flex-shrink: 0;
+}
+
+#title {
+    h1, h2 {
+        font-family: 'Source Code Pro';
+    }
+    h1 {
+        @include typed("Matheus Cavazotti", null, (caret: false, iterations: 0, delay: 2));
+    }
+    h2 {
+        @include typed("Hello, I\'m", null, (caret: false, iterations: 0));
+    }
+    @media (min-width: $v-small) {
+       margin-left: 1rem * 3;
+    }
+}
+
+#header {
+    @media screen and (min-width: $v-small) {
+        margin-top: 1rem * 2;
+        display: flex;
+        align-items: center;
+    }
+}
+
+#presentation {
+    animation: fade-in 1.5s 4s both;
+
+    h3 {
+        color: $c-neutral-0;
+    }
+    #skills {
+        @include typed(
+            "fold origamis and draw",
+            "like to learn",
+            "believe in God",
+            "like to play music and sing",
+            "am insterested in Computer Graphics",
+            (type: 0.05, pause-typed: 1.7, delete: 0.03),
+            (caret: true, iterations: 1, delay: 5, end-on:"seek excelence in all I do."));
+    }
+}

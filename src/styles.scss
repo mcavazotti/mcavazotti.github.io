@@ -7,9 +7,20 @@
 $primary: $c-primary;
 $secondary: $c-secondary;
 
-$body-bg: $c-background;
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 5;
+$h2-font-size: $font-size-base * 3;
+$h3-font-size: $font-size-base * 2.5;
+$h4-font-size: $font-size-base * 1.75;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+
+
+$body-bg: transparent;
 $body-color: $c-neutral-0;
 
+$grid-gutter-width: 2.5rem;
 
 $modal-content-bg: $c-background;
 $offcanvas-border-width: 1px;
@@ -17,23 +28,19 @@ $offcanvas-padding-y: 80px;
 
 $link-color: $primary;
 
+/* Importing Bootstrap SCSS file. */
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+/* Override element style */
+
+html {
+    min-height: 100vh;
+    background: transparent linear-gradient(205deg, $c-background 20%, $c-neutral-100 100%) 0% 0% no-repeat padding-box;
+}
 
 body {
     font-family: "Source Sans 3", sans-serif;
 }
-
-a, h1, h2, h3, h4 {
-    font-family: 'Source Sans 3', sans-serif;
-    color: $c-primary;
-}
-
-p {
-    font-family: 'Source Sans 3', sans-serif;
-    color: $c-neutral-0  !important;
-}
-
-/* Importing Bootstrap SCSS file. */
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 button {
     @include default-border;
@@ -50,6 +57,26 @@ button {
     }
 }
 
+
+a,
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    color: $c-primary;
+}
+
+p {
+    font-family: 'Source Sans 3', sans-serif;
+    color: $c-neutral-0  !important;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+/* Override Bootstrap components */
 .offcanvas {
     max-width: 50vw;
 }
