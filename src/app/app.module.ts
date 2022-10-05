@@ -7,6 +7,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
 import { PagesModule } from './pages/pages.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PagesModule,
     FontAwesomeModule,
     NgbModule,
+    ComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

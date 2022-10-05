@@ -1,13 +1,55 @@
 @use 'style/colors' as *;
-// @use 'style/mixins' as *;
+@use 'style/mixins' as *;
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 $primary: $c-primary;
 $secondary: $c-secondary;
-$body-bg: $c-background;
 
+$body-bg: $c-background;
+$body-color: $c-neutral-0;
+
+
+$modal-content-bg: $c-background;
+$offcanvas-border-width: 1px;
+$offcanvas-padding-y: 80px;
+
+$link-color: $primary;
+
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+}
+
+a, h1, h2, h3, h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    color: $c-primary;
+}
+
+p {
+    font-family: 'Source Sans 3', sans-serif;
+    color: $c-neutral-0  !important;
+}
 
 /* Importing Bootstrap SCSS file. */
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+button {
+    @include default-border;
+    @include default-transition;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 8px 16px;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: #0F9BEB33;
+    }
+}
+
+.offcanvas {
+    max-width: 50vw;
+}
