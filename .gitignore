@@ -48,3 +48,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+scullyStats.json
+/scully/**/*.js
+/scully/**/*.js.map
+/scully/**/*.d.ts
