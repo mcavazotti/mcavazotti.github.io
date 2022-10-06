@@ -1,0 +1,25 @@
+@use '../../../style/colors' as *;
+@use '../../../style/mixins' as *;
+
+#profile-pic {
+    border-radius: 50%;
+    max-width: 10rem;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h4{
+        color: $c-secondary;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+       a {
+        color: $c-neutral-0;
+       }
+    }
+}

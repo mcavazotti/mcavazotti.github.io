@@ -3,12 +3,16 @@ import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './home-page/home-page.component';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AboutPageComponent } from './about-page/about-page.component';
+import { PlaygroundPageComponent } from './playground-page/playground-page.component';
 
 
 
 @NgModule({
   declarations: [
-    HomePageComponent
+    HomePageComponent,
+    AboutPageComponent,
+    PlaygroundPageComponent
   ],
   imports: [
     CommonModule,

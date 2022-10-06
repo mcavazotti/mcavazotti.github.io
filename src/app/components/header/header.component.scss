@@ -2,8 +2,10 @@
 @use '../../../style/mixins' as *;
 
 .nav-div {
-    margin: 0 7.3vw;
-    margin-top: 33px;
+    @include default-blur;
+    padding: 0 7.3vw;
+    padding-top: 20px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

@@ -1,12 +1,14 @@
-<div class="nav-div">
+<div class="nav-div sticky-top">
     <!-- empty div to help centering -->
     <div></div>
     <div class="nav-links">
         <ng-container *ngTemplateOutlet="navLinks"></ng-container>
     </div>
-    <button class="playground-button">
-        <a routerLink="/playground" >Playground ></a>
-    </button>
+    <a routerLink="/playground">
+        <button class="playground-button">
+            Playground >
+        </button>
+    </a>
     <button class="nav-button" (click)="open(navLinks)">
         <fa-icon [icon]="barsIcon"></fa-icon>
     </button>
