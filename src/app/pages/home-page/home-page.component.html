@@ -1,12 +1,26 @@
 <div class="container px-5">
     <div id="header">
-        <img id="profile-pic" class="my-5" src="assets/profile.jpeg" alt="profile picture">
+        <img id="profile-pic" class="mb-5" src="assets/profile.jpeg" alt="profile picture">
         <div id="title">
             <h2></h2>
             <h1></h1>
+            <div id="presentation">
+                <h3 class="mx-auto">I <span id="skills"></span></h3>
+            </div>
         </div>
     </div>
-    <div id="presentation">
-        <h3 class="mx-auto">I'm a developer. I <span id="skills"></span></h3>
+    <div id="contact" class="my-5 d-flex flex-column align-items-center">
+        <h5>Find me on:</h5>
+        <div id="links">
+            <a href="https://www.instagram.com/matheuscavazotti/" title="Instagram">
+                <fa-icon [fixedWidth]="true" size="xl" [icon]="instagramIcon"></fa-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/matheus-cavazotti" title="LinkedIn">
+                <fa-icon [fixedWidth]="true" size="xl" [icon]="linkedInIcon"></fa-icon>
+            </a>
+            <a href="https://github.com/mcavazotti" title="GitHub">
+                <fa-icon [fixedWidth]="true" size="xl" [icon]="githubIcon"></fa-icon>
+            </a>
+        </div>
     </div>
 </div>

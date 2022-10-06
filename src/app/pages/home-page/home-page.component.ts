@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faLinkedinIn, faGithubAlt, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-home-page',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
+
+  linkedInIcon = faLinkedinIn;
+  githubIcon = faGithubAlt;
+  instagramIcon = faInstagram;
 
   constructor() { }
 
