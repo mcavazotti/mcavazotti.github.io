@@ -49,7 +49,7 @@
     height: 4rem;
 
     h3 {
-        color: $c-neutral-0;
+        color: $c-secondary;
     }
 
     #skills {
@@ -57,7 +57,7 @@
             "am insterested in Computer Graphics",
             "like arts and music",
             (type: 0.05, pause-typed: 1.5, delete: 0.03, pause-deleted:0.7),
-            (caret: true, iterations: 1, delay: 4.2, end-on:"seek excelence in all I do."));
+            (caret: true, iterations: 1, delay: 4.2, end-on:"seek excellence in all I do."));
     }
 }
 

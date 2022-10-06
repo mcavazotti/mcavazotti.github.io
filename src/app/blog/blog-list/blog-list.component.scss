@@ -1,0 +1,30 @@
+@use "../../../style/variables" as *;
+@use "../../../style/colors" as *;
+
+#posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    @media (min-width: $v-xsmall) and (max-width: $v-medium) {
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    @media (max-width: $v-xsmall) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post {
+        text-decoration: none;
+        &:hover {
+            color: $c-primary;
+        }
+    }
+}
+
+.tag {
+    color: $c-secondary;
+    &::before {
+        content: '#';
+    }
+}

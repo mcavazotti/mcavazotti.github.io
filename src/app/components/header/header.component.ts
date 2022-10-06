@@ -16,9 +16,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
   navigate() {
-    if(this.offcanvasRef) {
+    if (this.offcanvasRef) {
       this.offcanvasRef.close();
     }
   }
@@ -26,9 +26,8 @@ export class HeaderComponent implements OnInit {
   open(content: any) {
     this.sideNav = true;
     this.offcanvasRef = this.offcanvasService.open(content, { position: 'end' });
-    
-    let resetNav = ()=> {
-      setTimeout(()=> {this.sideNav = false}, 200);
+    let resetNav = () => {
+      setTimeout(() => { this.sideNav = false }, 200);
     };
 
 
