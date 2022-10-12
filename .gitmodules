@@ -1,3 +1,0 @@
-[submodule "src/submodules/planets"]
-	path = src/submodules/planets
-	url = https://github.com/mcavazotti/planets.git

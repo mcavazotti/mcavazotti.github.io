@@ -1,0 +1,27 @@
+<div class="nav-div sticky-top">
+    <!-- empty div to help centering -->
+    <div></div>
+    <div class="nav-links">
+        <ng-container *ngTemplateOutlet="navLinks"></ng-container>
+    </div>
+    <div></div>
+    <!-- Disable for now -->
+    <!-- <a routerLink="/playground">
+        <button class="playground-button">
+            Playground >
+        </button>
+    </a> -->
+    <button class="nav-button" (click)="open(navLinks)">
+        <fa-icon [icon]="barsIcon"></fa-icon>
+    </button>
+</div>
+
+<ng-template #navLinks>
+    <nav [ngClass]="{'side-nav': sideNav}">
+        <a routerLink="/home" routerLinkActive="active" (click)="navigate()">Home</a>
+        <a routerLink="/blog" routerLinkActive="active" (click)="navigate()">Blog</a>
+        <!-- Disable for now -->
+        <!-- <a routerLink="/projects" routerLinkActive="active" (click)="navigate()">Projects</a> -->
+        <a routerLink="/about" routerLinkActive="active" (click)="navigate()">About</a>
+    </nav>
+</ng-template>

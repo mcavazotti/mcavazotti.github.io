@@ -1,53 +1,25 @@
 @use '../../../style/colors' as *;
 @use '../../../style/mixins' as *;
 
-.page-content {
-    @include default-fade-in;
-    display: flex;
-}
-
 #profile-pic {
     border-radius: 50%;
-    filter: grayscale(1);
+    max-width: 10rem;
 }
 
 .contact {
-    margin: 0 120px;
     display: flex;
     flex-direction: column;
-
-    p {
-        margin: 32px auto;
-        background-color: $c-primary-a10;
-        padding: 8px 16px;
-        font-family: 'Source Sans 3', sans-serif;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: $c-primary;
+    align-items: center;
+    h4{
+        color: $c-secondary;
     }
 
     .icons {
         display: flex;
         justify-content: center;
-        gap: 32px;
-
+        gap: 2rem;
        a {
-        color: $c-primary;
-       }
-    }
-}
-
-.content {
-    margin-right: 120px;
-
-    h1 {
-        margin-top: 0;
-    }
-
-    p {
-        font-family: 'Source Sans 3', sans-serif;
-        font-weight: normal;
-        font-size: 20px;
         color: $c-neutral-0;
+       }
     }
 }

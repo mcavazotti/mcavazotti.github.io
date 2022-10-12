@@ -1,6 +1,0 @@
-<ng-container *ngIf="tags.length != 0">
-    <p>Quick filters:</p>
-    <div class="tags-div">
-        <span class="tag" *ngFor="let tag of tagsMapKeys" [ngClass]="{'active': tagsMap.get(tag)!}" (click)="changeTagState(tag)">{{tag}}</span>
-    </div>
-</ng-container>

@@ -33,14 +33,13 @@ jobs:
             ${{ runner.os }}-node-
       - name: Build
         run: |
-          npm install
+          npm install --force
           npm run-script deploy
-          cp docs/index.html docs/404.html
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.3
         with:
           branch: gh-pages
-          folder: docs
+          folder: dist/static
           clean: true
           clean-exclude: |
             .nojekyll

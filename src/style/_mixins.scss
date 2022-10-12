@@ -1,5 +1,6 @@
 @use './colors' as *;
 @use './animations' as *;
+@use './variables' as *;
 
 @mixin default-transition {
     transition: 300ms ease-in-out;
@@ -24,10 +25,34 @@
     border-radius: 8px;
 }
 
+@mixin default-border {
+    @include default-border-radius;
+    border: 1px solid $c-primary;
+    color: $c-primary;   
+}
+
 @mixin default-blur {
     backdrop-filter: blur(5px);
 }
 
 @mixin bg-primary-10 {
     background-color: $c-primary-a10;
+}
+
+@mixin hide-touch {
+    @media (hover: none) or (pointer: coarse) {
+        display: none;
+    }
+}
+
+@mixin hide-small {
+    @media screen and (max-width: $v-small) {
+        display: none;
+    }
+}
+
+@mixin hide-large {
+    @media screen and (min-width: $v-small) {
+        display: none;
+    }
 }

@@ -1,0 +1,10 @@
+<ng-container *ngIf="article">
+    <div class="container fadein">
+        <div class="tags">
+            <span class="tag" *ngFor="let tag of article['tags']">{{tag}}</span>
+        </div>
+        <h1>{{article.title}}</h1>
+        <div class="date mb-4"><span>{{article['date'] | date}}</span></div>
+        <scully-content></scully-content>
+    </div>
+</ng-container>

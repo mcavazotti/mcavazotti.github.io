@@ -1,100 +1,116 @@
-/* You can add global styles to this file, and also import other style files */
 @use 'style/colors' as *;
 @use 'style/mixins' as *;
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
-body {
-  //   @include flex-column;
-  //   min-height: 100vh;
-  //   padding: 0;
-  //   background-color: $c-background;
-  //   color: $c-primary;
-  margin: 0;
+$primary: $c-primary;
+$secondary: $c-secondary;
 
-  //   font-family: 'Source Code Pro', monospace;
-  //   letter-spacing: 0;
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 5;
+$h2-font-size: $font-size-base * 3;
+$h3-font-size: $font-size-base * 2.5;
+$h4-font-size: $font-size-base * 1.75;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+
+
+$body-bg: transparent;
+$body-color: $c-neutral-0;
+
+$grid-gutter-width: 2.5rem;
+
+$modal-content-bg: $c-alt-background-a20;
+$offcanvas-border-width: 1px;
+$offcanvas-padding-y: 80px;
+
+$card-bg: $c-neutral-100;
+$card-border-radius: .5rem;
+$card-border-color: $c-secondary-a50;
+
+$link-color: $primary;
+
+/* Importing Bootstrap SCSS file. */
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+/* Override element style */
+
+html {
+    min-height: 100vh;
+    background: transparent linear-gradient(205deg, $c-background 20%, $c-neutral-100 100%) 0% 0% no-repeat padding-box;
 }
 
-app-root {
-  @include flex-column;
-  @include flex-grow-1;
+body {
+    font-family: "Source Sans 3", sans-serif;
+}
+
+button {
+    @include default-border;
+    @include default-transition;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 8px 16px;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: #0F9BEB33;
+    }
+}
+
+
+a,
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    color: $c-primary;
+}
+
+p {
+    font-family: 'Source Sans 3', sans-serif;
+    color: $c-neutral-0  !important;
 }
 
 h1 {
-  font-size: 80px;
-  font-weight: bold;
+    font-weight: bold;
 }
 
-h3.block-header {
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: bold;
-  font-size: 24px;
-  color: $c-primary;
-  margin: 0;
+/* Override Bootstrap components */
+.offcanvas {
+    max-width: 50vw;
+    @include default-blur;
 }
 
-.page-content {
-  margin: 0 7.3vw;
-  margin-top: 120px;
+.card-img-top {
+    max-width: 100%;
+    max-height: 15rem;
+    object-fit: cover;
 }
 
-.text-page {
-  margin: 0 21vw;
-  margin-top: 120px;
-
-  h1 {
-    font-family: 'Source Code Pro', monospace;
-    font-weight: bold;
-    font-size: 80px;
-    color: $c-primary;
-    margin: 40px 0;
-  }
-
-  h2 {
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: bold;
-    font-size: 56px;
-    color: $c-primary;
-  }
-
-  h3 {
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: bold;
-    font-size: 36px;
-    color: $c-primary;
-  }
-
-  h4 {
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: bold;
-    font-size: 24px;
-    color: $c-primary;
-  }
-
-  p {
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: lighter;
-    font-size: 24px;
-    color: $c-neutral-0  !important;
-  }
+/* Global classes */
+.fadein {
+    @include default-fade-in;
 }
 
-span.tag {
-  @include default-border-radius;
-  @include default-transition;
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  color: $c-primary;
-  background-color: $c-primary-a10;
-  padding: 8px 16px;
-  text-transform: uppercase;
-
-  &.active {
+.tag {
+    @include default-border-radius;
     @include default-transition;
-    color: $c-neutral-100;
-    background-color: $c-primary;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: bold;
+    font-size: $font-size-lg;
+    color: $c-primary;
+    background-color: $c-primary-a10;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+  
+    &.active {
+      @include default-transition;
+      color: $c-neutral-100;
+      background-color: $c-primary;
+    }
   }
-}

@@ -1,22 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
-import { ArticlePageComponent } from './pages/article-page/article-page.component';
-import { BlogPageComponent } from './pages/blog-page/blog-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { PlaygroundPageComponent } from './pages/playground-page/playground-page.component';
-import { ProjectDetailsPageComponent } from './pages/project-details-page/project-details-page.component';
-import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 
 const routes: Routes = [
-  {path:"home", component: HomePageComponent},
-  {path:"blog", component: BlogPageComponent},
-  {path:"blog/:id", component: ArticlePageComponent},
-  {path:"projects", component: ProjectsPageComponent},
-  {path:"projects/:id", component: ProjectDetailsPageComponent},
-  {path:"about", component: AboutPageComponent},
-  {path:"playground", component: PlaygroundPageComponent},
-  {path:"", redirectTo:"home", pathMatch:"full"}
+  { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
+  { path: 'projects', loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule) },
+  { path: 'home', component: HomePageComponent, title: "Home"},
+  { path: 'about', component: AboutPageComponent, title: "About Me"},
+  { path: 'playground', component: PlaygroundPageComponent, title: "Playground" },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
