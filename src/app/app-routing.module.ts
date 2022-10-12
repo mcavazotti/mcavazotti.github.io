@@ -7,9 +7,9 @@ import { PlaygroundPageComponent } from './pages/playground-page/playground-page
 const routes: Routes = [
   { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
   { path: 'projects', loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule) },
-  { path: 'home', component: HomePageComponent },
-  { path: 'about', component: AboutPageComponent },
-  { path: 'playground', component: PlaygroundPageComponent },
+  { path: 'home', component: HomePageComponent, title: "Home"},
+  { path: 'about', component: AboutPageComponent, title: "About Me"},
+  { path: 'playground', component: PlaygroundPageComponent, title: "Playground" },
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
