@@ -1,0 +1,15 @@
+@use "../../../style/colors" as *;
+
+.tags{
+  display: flex;
+  gap: 0.75rem;
+}
+
+.date {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1.25rem;
+  padding-bottom: 1rem;
+  color: $c-secondary;
+  border-bottom: 1px solid $c-primary;
+  text-align: right;
+}

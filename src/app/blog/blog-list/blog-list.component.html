@@ -1,7 +1,7 @@
 <div class="container px-5 fadein">
     <h1 class="my-5">Blog</h1>
-    <ng-container *ngIf="(posts$|async) as posts; else empty">
-        <div id="posts">
+    <ng-container *ngIf="(posts$|async) as posts;">
+        <div id="posts" *ngIf="posts.length; else empty">
             <a class="post" *ngFor="let post of posts" [href]="post.route">
                 <div class="card" style="height: 100%;">
                     <img *ngIf="post['cover']" [src]="post['cover']" class="card-img-top">
@@ -11,7 +11,7 @@
                             <h6 class="card-subtitle mb-2 text-muted">{{post['date'] | date:'shortDate'}}</h6>
                             <p class="card-text">{{post['description']}}</p>
                         </div>
-                        <div *ngIf="post['tags']">
+                        <div *ngIf="post['tags']" class="tags">
                             <span *ngFor="let tag of post['tags']" class="card-link tag">{{tag}}</span>
                         </div>
                     </div>

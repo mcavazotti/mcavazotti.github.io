@@ -4,11 +4,13 @@
     <div class="nav-links">
         <ng-container *ngTemplateOutlet="navLinks"></ng-container>
     </div>
-    <a routerLink="/playground">
+    <div></div>
+    <!-- Disable for now -->
+    <!-- <a routerLink="/playground">
         <button class="playground-button">
             Playground >
         </button>
-    </a>
+    </a> -->
     <button class="nav-button" (click)="open(navLinks)">
         <fa-icon [icon]="barsIcon"></fa-icon>
     </button>
@@ -18,7 +20,8 @@
     <nav [ngClass]="{'side-nav': sideNav}">
         <a routerLink="/home" routerLinkActive="active" (click)="navigate()">Home</a>
         <a routerLink="/blog" routerLinkActive="active" (click)="navigate()">Blog</a>
-        <a routerLink="/projects" routerLinkActive="active" (click)="navigate()">Projects</a>
+        <!-- Disable for now -->
+        <!-- <a routerLink="/projects" routerLinkActive="active" (click)="navigate()">Projects</a> -->
         <a routerLink="/about" routerLinkActive="active" (click)="navigate()">About</a>
     </nav>
 </ng-template>

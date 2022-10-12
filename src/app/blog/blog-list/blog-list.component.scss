@@ -22,8 +22,15 @@
     }
 }
 
+.tags {
+    margin-top: 0.5rem;
+}
+
 .tag {
     color: $c-secondary;
+    font-size: 1rem;
+    background-color: transparent;
+    padding: 0;
     &::before {
         content: '#';
     }

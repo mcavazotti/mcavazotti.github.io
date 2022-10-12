@@ -11,11 +11,11 @@ import { filterPostRoutes } from 'src/app/helper-functions/filters';
 export class BlogListComponent implements OnInit {
   posts$: Observable<ScullyRoute[]>;
   constructor(private scully: ScullyRoutesService) {
-    this.posts$ = scully.allRoutes$.pipe(
+    this.posts$ = scully.available$.pipe(
       map((links) => links.filter(filterPostRoutes('blog')).map((link) => {
-        if (link['date']) {
-          link['date'] = new Date(link['date']);
-        }
+        // if (link['date']) {
+        //   link['date'] = new Date(link['date']);
+        // }
         return link;
       }).sort((a, b) => (a['date'] as Date).getTime() - (b['date'] as Date).getTime())
       )

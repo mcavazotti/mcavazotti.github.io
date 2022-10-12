@@ -96,3 +96,21 @@ h1 {
 .fadein {
     @include default-fade-in;
 }
+
+.tag {
+    @include default-border-radius;
+    @include default-transition;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: bold;
+    font-size: $font-size-lg;
+    color: $c-primary;
+    background-color: $c-primary-a10;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+  
+    &.active {
+      @include default-transition;
+      color: $c-neutral-100;
+      background-color: $c-primary;
+    }
+  }
