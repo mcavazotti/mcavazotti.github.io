@@ -12,7 +12,7 @@ What's the first step to start blogging? To have a blog!
 
 At first, I figured that I had some special requirements, therefore, using those Jekyll templates seemed to be a no go. I've been playing with JS lately, so I wanted to have some interactive demos in website, and since I'm Brazilian, I also wanted to have multi-language support. Finally, to make things more interesting, I decided that I wouldn't use any library besides Angular (that means that I would make the all the components and language support by hand!).
 
-When I finished, it was kinda hacky and ugly (you see, I'm not a UI designer). Then I asked for help from a friend of mine, Maiane, who is an awesome [UI/UX designer](www.maiane.com.br). She helped me with a brand new design that was way better.
+When I finished, it was kinda hacky and ugly (you see, I'm not a UI designer). Then I asked for help from a friend of mine, Maiane, who is an awesome [UI/UX designer](https://www.maiane.com.br). She helped me with a brand new design that was way better.
 
 The new site had some cool animations and interactivity, but (there's always a "but"), at the time, I wasn't concerned about the mobile presentation of my site. Moreover, all the routing was done on the client side, and that's not the ideal if I want people to find my articles on Google...
 
