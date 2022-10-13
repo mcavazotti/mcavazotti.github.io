@@ -38,7 +38,7 @@
 
 #header {
     @media screen and (min-width: $v-small) {
-        margin-top: 1rem * 2;
+        margin-top: 10rem;
         display: flex;
         align-items: center;
     }
@@ -62,7 +62,7 @@
 }
 
 #contact {
-    animation: fade-in 1s 18s both;
+    animation: fade-in 1s 1.5s both;
 
     #links {
         display: flex;
