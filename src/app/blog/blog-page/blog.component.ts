@@ -22,7 +22,7 @@ export class BlogComponent implements OnInit {
   async ngOnInit() {
     this.article = await firstValueFrom(this.scully.getCurrent());
     if(!this.article['cover'])
-    this.article['cover'] = `assets/covers/generated/${this.article.route.split('/').pop()}.png`;
+    this.article['cover'] = `https://mcavazotti.github.io/assets/covers/generated/${this.article.route.split('/').pop()}.png`;
 
     this.titleService.setTitle(this.article.title! + ' - Blog');
     this.meta.addTags([
