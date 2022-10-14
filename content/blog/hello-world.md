@@ -1,5 +1,6 @@
 ---
 title: Hello World - or Third time's a charm
+shortTitle: Hello World
 description: Every blog needs a first post. So here it is.
 date: 2022-10-13 13:30:00 -3
 tags: []
