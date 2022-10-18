@@ -16,7 +16,9 @@ export class BlogListComponent implements OnInit {
         if (link['date']) {
           link['date'] = new Date(link['date']);
         }
-        console.log(link)
+        if (!link['cover']) {
+          link['cover'] = `assets/covers/generated/${link.route.split('/').pop()}.png`;
+        }
         return link;
       }).sort((a, b) => (a['date'] as Date).getTime() - (b['date'] as Date).getTime())
       )
