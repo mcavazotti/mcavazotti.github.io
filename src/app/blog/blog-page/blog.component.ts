@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { AfterViewChecked, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { firstValueFrom } from 'rxjs';
+import { HighlightService } from 'src/app/helper-functions/highlight.service';
 
 @Component({
   selector: 'app-blog',
@@ -11,17 +12,21 @@ import { firstValueFrom } from 'rxjs';
   encapsulation: ViewEncapsulation.Emulated
 
 })
-export class BlogComponent implements OnInit {
+export class BlogComponent implements OnInit, AfterViewChecked  {
 
   article?: ScullyRoute;
   
-  constructor(private scully: ScullyRoutesService, private titleService:Title) {
+  constructor(private scully: ScullyRoutesService, private titleService:Title, private highlightService: HighlightService) {
 
   }
 
   async ngOnInit() {
     this.article = await firstValueFrom(this.scully.getCurrent());
     this.titleService.setTitle(this.article.title! + ' - Blog');
+  }
+
+  ngAfterViewChecked() {
+    this.highlightService.highlightAll();
   }
 
 }

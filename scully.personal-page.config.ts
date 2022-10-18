@@ -6,6 +6,9 @@ export const config: ScullyConfig = {
   projectName: 'personal-page',
   distFolder: './dist/personal-page', // output directory of your Angular build artifacts
   outDir: './dist/static', // directory for scully build artifacts
+  puppeteerLaunchOptions: {
+    args: ['--no-sandbox'],
+  },
   defaultPostRenderers: [],
   routes: {
     '/projects/:id': {
