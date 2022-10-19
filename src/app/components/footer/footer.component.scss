@@ -1,0 +1,28 @@
+@use "../../../style/variables" as *;
+@use "../../../style/colors" as *;
+
+#footer {
+    bottom: 0;
+    border-top: solid 1px $c-primary;
+    margin-top: 5rem;
+    font-size: 0.9rem;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @media (max-width: $v-xsmall) {
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+#links {
+    display: flex;
+    gap: 1em;
+}

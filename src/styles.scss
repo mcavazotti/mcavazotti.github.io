@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 @import '../node_modules/prismjs/plugins/toolbar/prism-toolbar.css';
-@import '../node_modules/prismjs/themes/prism-tomorrow.css';
+@import 'style/third-party/prism-dracula.css';
 
 $primary: $c-primary;
 $secondary: $c-secondary;

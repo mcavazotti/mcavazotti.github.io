@@ -20,7 +20,7 @@ export class BlogListComponent implements OnInit {
           link['cover'] = `assets/covers/generated/${link.route.split('/').pop()}.png`;
         }
         return link;
-      }).sort((a, b) => (a['date'] as Date).getTime() - (b['date'] as Date).getTime())
+      }).sort((a, b) => (b['date'] as Date).getTime() - (a['date'] as Date).getTime())
       )
     );
   }

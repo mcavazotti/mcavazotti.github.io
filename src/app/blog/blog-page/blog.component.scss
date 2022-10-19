@@ -1,5 +1,13 @@
 @use "../../../style/colors" as *;
 
+#bg {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: $c-neutral-100;
+  z-index: -1;
+}
+
 .tags{
   display: flex;
   gap: 0.75rem;
@@ -12,4 +20,13 @@
   color: $c-secondary;
   border-bottom: 1px solid $c-primary;
   text-align: right;
+}
+
+p, ol {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+p {
+  margin-bottom: 1.5rem;
 }
