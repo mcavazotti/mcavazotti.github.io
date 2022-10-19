@@ -13,7 +13,7 @@ This is my first how-to ever. I'll keep it short and direct, because I hate thos
 You want to transfer code from one repository to another, but you also want to keep that code's change history in the new repo.
 
 ## How to do it?
-First, let's name things properly: **source repo** is the repository where the code is coming from, **destination repo** is the one that's recieving the code.
+First, let's name things properly: **source repo** is the repository where the code is coming from, **destination repo** is the one that's receiving the code.
 
 1. Add the **source repo** as a remote to the **destination repo**:
 ```bash
@@ -26,7 +26,11 @@ $ git remote add source-repo <REPOSITORY LOCATION HERE> # it can be either a url
 $ git fetch source-repo # you can specify a branch if you want
 ```
 
-3. Find the commits you want to move. You can use the command line (`git log source-repo/<BRANCH>`) or some GUI client.
+3. Find the commits you want to move. You can use any GUI client or the command line:
+```bash
+$ git log source-repo/<BRANCH>
+```
+
 4. Move the commits. Beware of merge conflicts!
 ```bash
 $ git cherry-pick <COMMIT HASH> # check the docs to find more ways to use this command
@@ -36,3 +40,6 @@ $ git cherry-pick <COMMIT HASH> # check the docs to find more ways to use this c
 ```bash
 $ git remote remove source-repo
 ```
+
+## Wrap up
+As you can see, it's pretty simple, although this trick uses some less known Git commants. Any questions or suggestions, send me a message!
