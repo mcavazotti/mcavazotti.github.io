@@ -1,7 +1,7 @@
 <div id="bg" class="position-fixed"></div>
 <ng-container *ngIf="article">
-    <div class="container fadein">
-        <div class="tags">
+    <div class="container fadein mt-5">
+        <div class="tags mb-2">
             <span class="tag" *ngFor="let tag of article['tags']">{{tag}}</span>
         </div>
         <h1>{{article.title}}</h1>

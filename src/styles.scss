@@ -10,7 +10,7 @@ $primary: $c-primary;
 $secondary: $c-secondary;
 
 $font-size-base: 1rem;
-$h1-font-size: $font-size-base * 5;
+$h1-font-size: $font-size-base * 4;
 $h2-font-size: $font-size-base * 3;
 $h3-font-size: $font-size-base * 2.5;
 $h4-font-size: $font-size-base * 1.75;
@@ -103,8 +103,8 @@ h1 {
     @include default-border-radius;
     @include default-transition;
     font-family: 'Source Sans 3', sans-serif;
-    font-weight: bold;
-    font-size: $font-size-lg;
+    font-weight: 600;
+    font-size: $font-size-base;
     color: $c-primary;
     background-color: $c-primary-a10;
     padding: 0.5rem 1rem;
