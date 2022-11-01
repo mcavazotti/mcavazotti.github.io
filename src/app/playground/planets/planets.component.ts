@@ -14,7 +14,7 @@ export class PlanetsComponent implements OnInit, OnDestroy {
     this.meta.addTags([
       {name:'description',content: "A cool planet simulation!"},
       {property:'og:title',content: "Planet Simulation"},
-      {property:'og:image',content: "assets/covers/planets.png"},
+      {property:'og:image',content: "https://mcavazotti.github.io/assets/covers/planets.png"},
     ])
 
   }
