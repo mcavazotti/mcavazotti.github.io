@@ -4,13 +4,11 @@
     <div class="nav-links">
         <ng-container *ngTemplateOutlet="navLinks"></ng-container>
     </div>
-    <div></div>
-    <!-- Disable for now -->
-    <!-- <a routerLink="/playground">
+    <a routerLink="/playground">
         <button class="playground-button">
             Playground >
         </button>
-    </a> -->
+    </a>
     <button class="nav-button" (click)="open(navLinks)">
         <fa-icon [icon]="barsIcon"></fa-icon>
     </button>

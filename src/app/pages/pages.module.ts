@@ -4,7 +4,6 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutPageComponent } from './about-page/about-page.component';
-import { PlaygroundPageComponent } from './playground-page/playground-page.component';
 
 
 
@@ -12,7 +11,6 @@ import { PlaygroundPageComponent } from './playground-page/playground-page.compo
   declarations: [
     HomePageComponent,
     AboutPageComponent,
-    PlaygroundPageComponent
   ],
   imports: [
     CommonModule,
