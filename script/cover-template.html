@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            width: 1200px;
+            height: 650px;
+            margin: 0;
+        }
+
+        .main {
+            width: 100%;
+            height: 100%;
+            background: transparent linear-gradient(205deg, #05004F 20%, #0A051E 100%) 0% 0% no-repeat padding-box;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .inner {
+            border: 1px solid #0f9beb;
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #bg {
+            position: absolute;
+            border: none;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        h1 {
+            font-family: 'Source Sans 3', sans-serif;
+            color: #0f9beb;
+            font-size: 80;
+            margin-top: 0;
+        }
+        h2 {
+            font-family: 'Source Sans 3', sans-serif;
+            color: #0f9beb;
+            font-size: 56;
+            font-weight: normal;
+            margin: 0;
+
+        }
+    </style>
+    <script>
+        function draw() {
+            const canvas = document.getElementById('bg');
+            const ctx = canvas.getContext("2d");
+            const defaultRaidus = 10;
+            const maxX = (1200 / (defaultRaidus * 2)) + 1;
+            const maxY = (650 / (defaultRaidus * 2)) + 1;
+            ctx.rotate((Math.PI / 180) * 25);
+            ctx.translate(100, -80);
+            for (let y = 0; y < maxY; y++) {
+                let radius = Math.pow(y / maxY, 0.8) * defaultRaidus;
+                let color = `#0F9BEB${Math.floor(((radius / 100)) * 255).toString(16).padStart(2, '0')}`
+                ctx.fillStyle = color;
+                ctx.beginPath();
+                for (let x = 0; x < maxX; x++) {
+                    ctx.arc(x * (defaultRaidus * 2), y * (defaultRaidus * 2), radius, 0, 2 * Math.PI);
+                }
+                ctx.fill()
+            }
+        }
+    </script>
+</head>
+
+<body onload="draw();">
+    <div class="main">
+        <canvas id="bg" width="1200" height="650"></canvas>
+        <div class="inner">
+            <h1>{{title}}</h1>
+            <h2>{{caption}}</h2>
+        </div>
+    </div>
+</body>
+
+</html>
