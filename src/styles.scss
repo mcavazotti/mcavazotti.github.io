@@ -116,3 +116,11 @@ h1 {
       background-color: $c-primary;
     }
   }
+
+  #bg {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: $c-neutral-100;
+    z-index: -1;
+  }
