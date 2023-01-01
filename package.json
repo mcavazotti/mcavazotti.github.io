@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.1.0",
-    "@angular/cli": "~14.1.0",
+    "@angular/cli": "~15.0.4",
     "@angular/compiler-cli": "^14.1.0",
     "@scullyio/init": "^2.1.41",
     "@scullyio/scully": "^2.1.41",
