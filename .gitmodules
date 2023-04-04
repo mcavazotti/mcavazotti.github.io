@@ -1,0 +1,3 @@
+[submodule "projects/planets"]
+	path = projects/planets
+	url = https://github.com/mcavazotti/planets.git

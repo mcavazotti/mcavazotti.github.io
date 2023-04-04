@@ -1,0 +1,9 @@
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.card-img-top {
+    max-height: none;
+}
