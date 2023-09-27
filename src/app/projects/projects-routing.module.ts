@@ -9,8 +9,7 @@ const routes: Routes = [
     component: ProjectsComponent,
   },
   {
-    path: '**',
-    component: ProjectsComponent,
+    path: '**', redirectTo: 'projects', pathMatch: 'full' 
   }
 ];
 

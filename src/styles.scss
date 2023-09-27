@@ -124,3 +124,9 @@ h1 {
     background-color: $c-neutral-100;
     z-index: -1;
   }
+
+  .project-image {
+    max-width: 100%;
+    width: 500px;
+    margin-bottom: 24px;
+  }
