@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import {ActivatedRoute, Router, ROUTES} from '@angular/router';
 
 declare var ng: any;
@@ -14,6 +15,13 @@ declare var ng: any;
 export class ProjectsComponent implements OnInit {
   ngOnInit() {}
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(private meta: Meta) {
+    this.meta.addTags([
+      { name: 'description', content: "Some of my personal projects" },
+      { property: 'og:type', content: 'article' },
+      { property: 'og:title', content: "Projects - Matheus Cavazotti" },
+      { property: 'og:image', content: 'https://mcavazotti.github.io/assets/covers/generated/projects.png' },
+
+    ]);
   }
 }
