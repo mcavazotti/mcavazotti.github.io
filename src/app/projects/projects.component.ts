@@ -20,7 +20,7 @@ export class ProjectsComponent implements OnInit {
       { name: 'description', content: "Some of my personal projects" },
       { property: 'og:type', content: 'article' },
       { property: 'og:title', content: "Projects - Matheus Cavazotti" },
-      { property: 'og:image', content: 'https://mcavazotti.github.io/assets/covers/generated/terrain.png' },
+      { property: 'og:image', content: 'https://mcavazotti.github.io/assets/covers/generated/projects.png' },
 
     ]);
   }
