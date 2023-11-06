@@ -6,6 +6,18 @@ published: true
 
 # Here are some of my projects!
 
+
+### WebGL Node Editor
+
+<img src="assets/images/nodes.png" class="project-image"/>
+
+Inspired by [Blender](https://www.blender.org/) and [Shadertoy](https://www.shadertoy.com/), I created this tool demo that generates GLSL code from a node tree interface.
+
+To create the interface, I used pure Typescript to create the UI and to write a compiler-like module that transverses the node tree and generates GLSL code. The highlight of this project is not the "compiler" itself, but the architecture design of the whole tool: I needed a foundation that made creating new types of nodes as easy as possible, and after three iterations I can finally say I did it. In the near future I want to expose the API I created so users can create their own custom nodes.
+
+- **Code:** [Github](https://github.com/mcavazotti/webgl-nodes)
+- **Demo:** [Webapp](https://webgl-nodes.vercel.app/)
+
 ### Procedural Terrain Generator
 
 <img src="assets/images/terrain.png" class="project-image"/>
